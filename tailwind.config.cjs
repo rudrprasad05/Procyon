@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				'procyon-pink': '#dc5a97',
+				'procyon-purple': '#3b0764',
 			  },
               height: {
                 "10v": "10vh",

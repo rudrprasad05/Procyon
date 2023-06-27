@@ -1,3 +1,6 @@
+/* Google font imports to see which fits best  */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
 @tailwind components;
 @tailwind utilities;
 @tailwind base;
@@ -7,10 +10,42 @@
     .star{
         @apply stroke-main-pink;
     }
-
+  
 }
 
-/* you can write normal css here like
-.class {
-    display: flex;
-} */
+*{
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Custom font imports */
+
+@font-face {
+    font-family: 'SpaceExplorer';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/public/fonts/SPACE_EXPLORER.ttf") format('truetype');
+  }
+
+@font-face {
+    font-family: 'Skygraze';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/public/fonts/Skygraze-PKYod.ttf") format('truetype');
+  }
+
+@font-face {
+    font-family: 'GrahamPotta';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/public/fonts/GrahamPottaFreePersonalUse-MVR1P.otf") format('opentype');
+  }
+
+  .h1 {
+      font-family: "GrahamPotta";
+      font-family: "SpaceExplorer";
+      font-family: "Skygraze";
+  }
+
