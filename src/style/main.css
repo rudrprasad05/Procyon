@@ -1,0 +1,20 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+@layer base {
+
+    :root {
+        --CBlue: #38b6ff;
+        --CGray: #282a30;
+        --CBlack: #151515;
+        --CWhite: #ffffff4d;
+        --CGhost: rgba(149, 157, 165, 0.1);
+        --CCool: #DFE7F2;
+    }
+
+    .star{
+        @apply stroke-main-pink;
+    }
+
+}
