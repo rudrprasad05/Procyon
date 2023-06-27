@@ -5,7 +5,7 @@
 @layer base {
 
     .star{
-        @apply stroke-main-pink;
+        @apply stroke-procyon-pink;
     }
 
 }
