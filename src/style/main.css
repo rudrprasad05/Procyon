@@ -14,6 +14,14 @@
     .btn{
         @apply bg-procyon-pink opacity-100 py-2 px-6 rounded m-4
     }
+
+    .counter-svg{
+      @apply w-10 h-10 stroke-white
+    }
+
+    .titles{
+      @apply h1 text-3xl my-5 w-full text-center text-white
+    }
   
 }
 
