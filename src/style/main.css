@@ -8,7 +8,11 @@
 @layer base {
 
     .star{
-        @apply stroke-main-pink;
+        @apply stroke-procyon-pink;
+    }
+
+    .btn{
+        @apply bg-procyon-pink opacity-100 py-2 px-6 rounded m-4
     }
   
 }

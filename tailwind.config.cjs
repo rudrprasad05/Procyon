@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+
 				'procyon-pink': '#dc5a97',
 				'procyon-purple': '#3b0764',
 			  },
