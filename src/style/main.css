@@ -28,7 +28,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/public/fonts/SPACE_EXPLORER.ttf") format('truetype');
+    src: url("/fonts/SPACE_EXPLORER.ttf") format('truetype');
   }
 
 @font-face {
@@ -36,7 +36,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/public/fonts/Skygraze-PKYod.ttf") format('truetype');
+    src: url("/fonts/Skygraze-PKYod.ttf") format('truetype');
   }
 
 @font-face {
@@ -44,12 +44,15 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/public/fonts/GrahamPottaFreePersonalUse-MVR1P.otf") format('opentype');
+    src: url("/fonts/GrahamPottaFreePersonalUse-MVR1P.otf") format('opentype');
   }
 
   .h1 {
-      font-family: "GrahamPotta";
-      font-family: "SpaceExplorer";
+      /* font-family: "GrahamPotta"; */
+      /* font-family: "SpaceExplorer"; */
       font-family: "Skygraze";
   }
 
+  .lift {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
