@@ -22,7 +22,22 @@
     .titles{
       @apply h1 text-3xl my-5 w-full text-center text-white
     }
-  
+
+    .services-cards{
+        @apply relative grid h-full rounded-md bg-procyon-highlight-purple aspect-square p-3 overflow-clip
+    }
+
+    .service-card-img{
+
+        @apply w-8 h-8 ml-3 mt-3
+    }
+
+
+
+    .circle-designs{
+        @apply p-2.5 border-solid border-2 border-secondary-color-2 aspect-square rounded-full h-full
+    }
+
 }
 
 *{
