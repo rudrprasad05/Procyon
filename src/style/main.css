@@ -12,7 +12,7 @@
     }
 
     .btn{
-        @apply bg-procyon-pink opacity-100 py-2 px-6 rounded m-4
+        @apply opacity-100 py-2 px-6 rounded-3xl mr-5 transition duration-200 ease-linear
     }
 
     .counter-svg{
@@ -27,6 +27,25 @@
 
 *{
     font-family: 'Rubik', sans-serif;
+}
+
+.burningBtn {
+    background-image: linear-gradient(to right, #FF3131 , #FF914D);
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px #FF914D;
+    background-color: #fc8236;
+}
+
+
+
+
+.burningText {
+    font-size: 72px;
+    background-image: linear-gradient(to right, #FF3131 , #FF914D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Custom font imports */
@@ -55,12 +74,43 @@
     src: url("/fonts/GrahamPottaFreePersonalUse-MVR1P.otf") format('opentype');
   }
 
-  .h1 {
-      /* font-family: "GrahamPotta"; */
-      /* font-family: "SpaceExplorer"; */
-      font-family: "Skygraze";
-  }
+body {
+    background-color: #3b0764;
+}
 
-  .lift {
+.h1 {
+    /* font-family: "GrahamPotta"; */
+    /* font-family: "SpaceExplorer"; */
+    font-family: "Skygraze";
+}
+
+.lift {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #3b0764;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:#581c87;
+    border-radius: 4px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b21a8;        
+}
+
+.glow {
+    -webkit-filter: drop-shadow(0px 0px 50px #FF914D);
+    filter: drop-shadow(0px 0px 50px #FF914D);
   }

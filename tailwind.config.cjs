@@ -5,7 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 
-				'procyon-pink': '#dc5a97',
+				'procyon-pink': '#FF914D',
 				'procyon-purple': '#3b0764',
 			  },
               height: {
@@ -19,6 +19,9 @@ module.exports = {
                 "80v": "80vh",
                 "90v": "90vh",
                 "100v": "100vh",
+            },
+            scale: {
+                '-100': '-1',
             },
 		},
 	},
