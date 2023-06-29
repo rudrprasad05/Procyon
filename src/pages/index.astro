@@ -12,11 +12,16 @@ import "../style/main.css"
 	<div class="relative h-90v flex flex-row items-center justify-center m-auto w-4/5">
 
 		<div class="h-50v w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
-			<p class="heroText h-min font-extrabold italic text-6xl">Unleash Your <br> Digital Potential </p>
-			<p class="h-min text-2xl my-5">Procyon: your destination for expert website development and stellar graphic design solutions.</p>
+			<p class="h-min font-extrabold italic text-6xl"><span class="word">Unleash</span> <span class="word">Your</span> <br> <span class="word">Digital</span> <span class="word">Potential</span> </p>
+			<p class="heroDescription h-min text-2xl my-5">Procyon: your destination for expert website development and stellar graphic design solutions.</p>
 			<div class="flex h-min w-max">
-				<button class="btn font-semibold tracking-wider burningBtn">Free Consultaion</button>
-				<button class="btn font-semibold tracking-wider border-2 border-amber-600">Our Works</button>
+				<div class="heroBtn">
+                    <button class="btn font-semibold tracking-wider burningBtn">Free Consultaion</button>
+                </div>
+
+				<div class="heroBtn">
+                    <button class="btn font-semibold tracking-wider border-2 border-amber-600">Our Works</button>
+                </div>
 			</div>
 
 			<!-- <div class="absolute w-16 h-16 top-2/3 left-full">
@@ -168,6 +173,14 @@ import "../style/main.css"
 
 
 </Base>
+
+<script>
+    import { gsap } from 'gsap';
+    const tl = gsap.timeline()
+    tl.from('.word', {stagger: 0.25, opacity: 0, delay: 0.25, ease:"power2"});
+    tl.from('.heroDescription', {  opacity: 0, duration: 0.25, ease:"power2"});
+    tl.from('.heroBtn', {stagger: 0.2, y: 25 , opacity: 0, ease: "back.out(3)"});
+</script>
 
 <!-- <script>
 

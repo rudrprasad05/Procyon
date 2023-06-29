@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
     "astro": "^2.7.0",
+    "gsap": "^3.12.2",
     "tailwindcss": "^3.3.2"
   },
   "description": "``` npm create astro@latest -- --template minimal ```",
