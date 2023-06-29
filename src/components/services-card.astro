@@ -1,0 +1,23 @@
+---
+import CircleDesigns from "./circle-designs.astro";
+const {name, svg} = Astro.props
+
+---
+
+<div class="services-cards z-10">
+    <div class="absolute">
+        <img src={svg} alt="" class="service-card-img">
+    </div>
+    <p class="text-white text-2xl font-extrabold h-min my-auto">
+        {name}
+    </p>
+    <div class="h-min mt-auto text-secondary-color flex">
+        <p>
+            Learn more
+        </p>
+        <span class="ml-2">
+            <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
+        </span>
+    </div>
+    <CircleDesigns></CircleDesigns>
+</div>
