@@ -4,7 +4,7 @@ const {name, svg} = Astro.props
 
 ---
 
-<div class="services-cards z-10">
+<div class="services-cards service z-10">
     <div class="absolute">
         <img src={svg} alt="" class="service-card-img">
     </div>
@@ -12,12 +12,14 @@ const {name, svg} = Astro.props
         {name}
     </p>
     <div class="h-min mt-auto text-secondary-color flex">
+       <a href="" class="flex items-center">
         <p>
             Learn more
         </p>
         <span class="ml-2">
             <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
         </span>
+       </a>
     </div>
     <CircleDesigns></CircleDesigns>
 </div>

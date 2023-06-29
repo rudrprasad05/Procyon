@@ -24,12 +24,12 @@
     }
 
     .services-cards{
-        @apply relative grid h-full rounded-md bg-procyon-highlight-purple aspect-square p-3 overflow-clip
+        @apply relative grid h-full rounded-md bg-procyon-highlight-purple aspect-square p-3 overflow-clip border border-purple-500
     }
 
     .service-card-img{
 
-        @apply w-8 h-8 ml-3 mt-3
+        @apply w-8 h-8 ml-3 mt-3 
     }
 
 
