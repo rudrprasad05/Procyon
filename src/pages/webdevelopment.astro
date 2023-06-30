@@ -1,0 +1,136 @@
+---
+import Base from "../layout/base.astro";
+import "../style/main.css"
+
+import OfferCard from "../components/offer-card.astro";
+import Prices from "../components/prices.astro";
+---
+
+<Base title="Web Development">
+
+
+    <!-- landing -->
+    <div class="relative h-90v flex flex-row items-center justify-center m-auto w-4/5">
+
+		<div class="w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
+			<p class="h-min font-extrabold italic text-6xl pb-5">
+                <span class="word">Create</span> 
+                <span class="word">a</span> 
+                <span class="word">Web</span> <br>
+                <span class="word">Presence</span>
+                <span class="word">that's</span> <br>
+                <span class="word">Truly</span>
+                <span class="word">Stellar</span>
+                
+            </p>
+			<div class="flex h-min w-max">
+				<div class="heroBtn">
+                    <button class="btn font-semibold tracking-wider burningBtn">Pricing</button>
+                </div>
+
+				<div class="heroBtn">
+                    <button class="btn font-semibold tracking-wider border-2 border-amber-600">Features</button>
+                </div>
+			</div>
+
+
+		</div>
+        <div class="w-1/2">
+            <img class="transform -scale-x-100 m-auto" src="/images/astronaut.png" alt="">
+        </div>
+
+		
+	
+	</div>
+
+    <!-- services -->
+    <p class="text-white text-5xl text-center font-extrabold mb-16">
+        What We Have to Offer
+    </p>
+    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
+
+        <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm rotate-45">
+			<img src="/images/orange-planet.png" alt="" class="w-full">
+		</div>
+		
+        <OfferCard
+            name="Fast & Responsive"
+            svg="/images/svg/bolt.svg"
+        />
+        <OfferCard
+            name="Backend Features"
+            svg="/images/svg/data.svg"
+        />
+        <OfferCard
+            name="Editable"
+            svg="/images/svg/pencil.svg"
+        />
+    </div>
+
+    <div class="relative">
+    
+        <p class="text-white text-5xl text-center font-extrabold mb-16">
+            Our Prices
+        </p>
+
+        <Prices 
+            bundle="Nebula"
+            price="$350"
+
+            Feature1="Basic Website"
+            Feature2="3 - 5 Pages"
+            Feature3="1 Day Delivery"
+
+            Tech1="HTML"
+            Tech2="CSS"
+            Tech3="Vanilla JS"
+
+            Use1="Portfolio"
+            Use2="Small Business"
+            Use3="Event Promos"
+        />
+
+        <Prices 
+            bundle="Nebula"
+            price="$350"
+
+            Feature1="Basic Website"
+            Feature2="3 - 5 Pages"
+            Feature3="1 Day Delivery"
+
+            Tech1="HTML"
+            Tech2="CSS"
+            Tech3="Vanilla JS"
+
+            Use1="Portfolio"
+            Use2="Small Business"
+            Use3="Event Promos"
+        />
+
+        <Prices 
+            bundle="Nebula"
+            price="$350"
+
+            Feature1="Basic Website"
+            Feature2="3 - 5 Pages"
+            Feature3="1 Day Delivery"
+
+            Tech1="HTML"
+            Tech2="CSS"
+            Tech3="Vanilla JS"
+
+            Use1="Portfolio"
+            Use2="Small Business"
+            Use3="Event Promos"
+        />
+
+         <div class="w-4/12 absolute top-32 -right-16 -z-10 blur-sm -rotate-45">
+			<img src="/images/blue-planet.png" alt="" class="w-full z-0">
+		</div>
+
+    </div>
+    
+ 
+
+
+</Base>

@@ -32,7 +32,9 @@
         @apply w-8 h-8 ml-3 mt-3 
     }
 
-
+    .footer-p{
+        @apply mb-1
+    }
 
     .circle-designs{
         @apply p-2.5 border-solid border-2 border-secondary-color-2 aspect-square rounded-full h-full
@@ -47,6 +49,7 @@
 .burningBtn {
     background-image: linear-gradient(to right, #FF3131 , #FF914D);
 }
+
 
 .btn:hover {
     box-shadow: 0 0 10px #FF914D;
