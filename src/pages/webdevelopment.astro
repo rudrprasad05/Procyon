@@ -2,8 +2,9 @@
 import Base from "../layout/base.astro";
 import "../style/main.css"
 
-import OfferCard from "../components/offer-card.astro";
+import OfferCard from "../components/offerCard.astro";
 import Prices from "../components/prices.astro";
+import HowItWorks from "../components/howItWorks.astro";
 ---
 
 <Base title="Web Development">
@@ -67,7 +68,7 @@ import Prices from "../components/prices.astro";
         />
     </div>
 
-    <div class="relative">
+    <div class="relative mb-40">
     
         <p class="text-white text-5xl text-center font-extrabold mb-16">
             Our Prices
@@ -130,7 +131,51 @@ import Prices from "../components/prices.astro";
 
     </div>
     
- 
+    <p class="text-white text-5xl text-center font-extrabold mb-16">
+        How it Works
+    </p>
+    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40">
+        <div class="w-5/12 absolute top-1/3 -left-1/4 z-0 blur-sm rotate-45">
+			<img src="/images/red-planet.png" alt="" class="w-full">
+		</div>
+
+        <HowItWorks
+            number="01"
+            name="Planning"
+        />
+        <HowItWorks
+            number="02"
+            name="Planning"
+        />
+        <HowItWorks
+            number="02"
+            name="Planning"
+        />
+        <HowItWorks
+            number="02"
+            name="Planning"
+        />
+        <HowItWorks
+            number="02"
+            name="Planning"
+        />
+        <HowItWorks
+            number="02"
+            name="Planning"
+        />
+    </div>
 
 
 </Base>
+
+<script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger)
+    const tl = gsap.timeline()
+
+   
+    gsap.from(".offer", {scrollTrigger: ".offer", y: 100, opacity:0,  stagger: 0.3 });
+    gsap.from(".prices", {scrollTrigger: ".prices", y: 100, opacity:0,  stagger: 0.3 });
+    gsap.from(".works", {scrollTrigger: ".works", y: 100, opacity:0,  stagger: 0.3 });
+</script>
