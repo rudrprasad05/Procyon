@@ -7,9 +7,9 @@ module.exports = {
 
 				'procyon-pink': '#FF914D',
 				'procyon-purple': '#3b0764',
-        'procyon-highlight-purple': '#6B21A8',
-        'secondary-color': '#C4B5FD',
-        'secondary-color-2': '#9333EA'
+                'procyon-highlight-purple': '#6B21A8',
+                'secondary-color': '#C4B5FD',
+                'secondary-color-2': '#9333EA'
 			  },
               height: {
                 "10v": "10vh",

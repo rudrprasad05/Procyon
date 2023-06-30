@@ -2,39 +2,45 @@
 const {bundle, price, Feature1, Feature2, Feature3, Tech1, Tech2, Tech3, Use1, Use2, Use3} = Astro.props
 ---
 
-<div class="flex w-4/5 mx-auto justify-between bg-procyon-highlight-purple rounded-lg mb-10 p-4 mb-12 z-20">
+<div class="flex w-4/5 mx-auto items-center justify-between bg-procyon-highlight-purple rounded-lg  p-5 mb-12 z-20 border border-purple-500">
     <div class="flex flex-col justify-around">
-        <p class="text-white text-3xl">{bundle}</p>
-        <p class="burningText text-3xl">{price}</p>
+        <p class="text-white font-extrabold mb-1 text-4xl tracking-wider">{bundle}</p>
+        <p class="burningText text-4xl font-extrabold italic tracking-wider">{price}</p>
     </div>
     <div class="flex flex-col justify-center">
-        <p class="text-white text-lg mb-0.5">Features</p>
-        <p class="text-secondary-color text-sm">{Feature1}</p>
-        <p class="text-secondary-color text-sm">{Feature2}</p>
-        <p class="text-secondary-color text-sm">{Feature3}</p>
+        <p class="text-white text-xl mb-0.5">Features</p>
+        <p class=" text-sm">{Feature1}</p>
+        <p class=" text-sm">{Feature2}</p>
+        <p class=" text-sm">{Feature3}</p>
        
     </div>
     <div class="flex flex-col justify-center">
-        <p class="text-white text-lg mb-0.5">Tech</p>
-        <p class="text-secondary-color text-sm">{Tech1}</p>
-        <p class="text-secondary-color text-sm">{Tech2}</p>
-        <p class="text-secondary-color text-sm">{Tech3}</p>
+        <p class="text-white text-xl mb-0.5">Tech</p>
+        <p class=" text-sm">{Tech1}</p>
+        <p class=" text-sm">{Tech2}</p>
+        <p class=" text-sm">{Tech3}</p>
     </div>
     <div class="flex flex-col justify-center">
-        <p class="text-white text-lg mb-0.5">Uses</p>
-        <p class="text-secondary-color text-sm">{Use1}</p>
-        <p class="text-secondary-color text-sm">{Use2}</p>
-        <p class="text-secondary-color text-sm">{Use3}</p>
+        <p class="text-white text-xl mb-0.5">Uses</p>
+        <p class=" text-sm">{Use1}</p>
+        <p class=" text-sm">{Use2}</p>
+        <p class=" text-sm">{Use3}</p>
     </div>
     <div class="flex flex-col justify-around">
        
         <div class="heroBtn w-min">
-            <button class="btn font-semibold tracking-wider border-2 border-secondary-color text-secondary-color m-0 mb-2">Examples</button>
+            <button class="btn font-semibold tracking-wider border border-secondary-color text-white m-0 mb-3">Examples</button>
         </div>
 
            <div class="heroBtn">
-            <button class="btn font-semibold tracking-wider burningBtn w-full">Hire Us</button>
+            <button class="btn font-semibold tracking-wider text-white  burningBtn w-full">Hire Us</button>
         </div>
 
     </div>
 </div>
+
+<style>
+ div p {
+        color: var( --secondary-color);
+    }
+</style>
