@@ -61,11 +61,7 @@
     background-color: #fc8236;
 }
 
-
-
-
 .burningText {
-    font-size: 72px;
     background-image: linear-gradient(to right, #FF3131 , #FF914D);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
