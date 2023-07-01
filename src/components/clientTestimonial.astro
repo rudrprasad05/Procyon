@@ -1,6 +1,6 @@
 ---
 
-const {name, image} = Astro.props
+const {name, image, desc} = Astro.props
 
 ---
 
@@ -8,11 +8,15 @@ const {name, image} = Astro.props
     <div class="absolute rotate-180 m-3">
         <img src="/images/svg/q.svg" alt="" class="w-8 h-8">
     </div>
-    <p class="text-white text-2xl font-extrabold h-min my-auto">
+    <p class="text-white text-2xl font-extrabold h-min mt-8 mb-4 h-min">
         {name}
     </p>
+
+    <p class="grow text-secondary-color">
+    {desc}
+    </p>
     
-   <div class="h-24 w-24 mt-auto ml-auto relative rounded-full overflow-clip border-2 border-purple-500">
-        <img src={image} alt="" class="object-contain">
+    <div class="h-24 w-24 mt-auto ml-auto relative rounded-full overflow-clip border-2 border-purple-500">
+        <img src={image} alt="" class="object-cover h-full w-full">
     </div>
 </div>

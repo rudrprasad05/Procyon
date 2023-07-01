@@ -44,11 +44,12 @@ import ClientTestimonial from "../components/clientTestimonial.astro";
 		Websites
 	</p>
 
+
 	<!-- services -->
 	<div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40">
 
-		<div class="w-2/12 absolute top-3/4 -right-32 z-20">
-			<img src="/images/star.png" alt="" class="w-full">
+		<div class="w-2/12 absolute top-full -right-32 z-20" >
+			<img src="/images/star.png" alt="" class="w-full relative glow2" id="star">
 		</div>
 
 		
@@ -58,24 +59,22 @@ import ClientTestimonial from "../components/clientTestimonial.astro";
 			path="/webdevelopment"
 			/>
 	
+			<ServicesCard
+				name="Graphic Design"
+				svg="/images/svg/graphics.svg"
+				path="/design"
 
-	
-		<ServicesCard
-			name="Graphic Design"
-			svg="/images/svg/graphics.svg"
-			path="/design"
+			/>
 
-		/>
+			<ServicesCard
+				name="Computer Repairs"
+				svg="/images/svg/gear.svg"
+				path='/repairs'
 
-		<ServicesCard
-			name="Computer Repairs"
-			svg="/images/svg/gear.svg"
-			path='/repairs'
+			/>
 
-		/>
-
-		<div class="w-4/12 absolute -top-2/4 -left-1/4 z-0 blur-sm rotate-45">
-			<img src="/images/yellow-planet.png" alt="" class="w-full">
+		<div class="w-4/12 absolute -top-2/4 -left-1/4 z-0 blur-sm rotate-45" >
+			<img src="/images/yellow-planet.png" alt="" class="w-full relative" id="yellow-planet">
 		</div>
 		
 
@@ -94,7 +93,7 @@ import ClientTestimonial from "../components/clientTestimonial.astro";
 		
 	</div>
 
-	<!-- jesus -->
+	<!-- client testimonials -->
 
 	<div class="my-32 mb-40">
 
@@ -104,23 +103,26 @@ import ClientTestimonial from "../components/clientTestimonial.astro";
 		<div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-20">
 
 			<ClientTestimonial
-				name="Anav"
-				image="/images/anav.jpg"
+				name="Sarah Thopmson"
+				image="/images/client_img_1.jpeg"
+				desc="Working with Procyon Web Development Company was an absolute pleasure! They were highly professional, skilled, and delivered exceptional results. We highly recommend Procyon Web Development Company for anyone looking for top-notch web development services."
 			/>
 
 			<ClientTestimonial
-				name="Rudr"
-				image="/images/rudr.jpg"
+				name="Kevin McCallister"
+				image="/images/client_img_2.jpeg"
+				desc="From the moment we engaged them, their team demonstrated a deep understanding of our business goals and translated them into an exceptional website. We are extremely satisfied with the quality of their work and wouldn't hesitate to recommend Procyon Web Development Company to others."
 			/>
 
 			<ClientTestimonial
-				name="Rudr"
-				image="/images/anav.jpg"
+				name="Klarke Kent"
+				image="/images/client_img_3.webp"
+				desc="Choosing Procyon for our website development was one of the best decisions we made. Their team was not only highly skilled but also incredibly collaborative. We would wholeheartedly recommend them to anyone in need of top-quality web development services"
 			/>
 		
 
 			<div class="w-6/12 absolute -bottom-2/4 -left-1/3 z-0 blur-sm rotate-45">
-				<img src="/images/pink-planet.png" alt="" class="w-full">
+				<img src="/images/pink-planet.png" alt="" class="w-full relative" id='pink-planet'>
 			</div>
 		</div>
 
@@ -145,6 +147,28 @@ import ClientTestimonial from "../components/clientTestimonial.astro";
     tl.from('.heroBtn', {stagger: 0.2, y: 25 , opacity: 0, ease: "back.out(3)"});
     gsap.from(".service", {scrollTrigger: ".service", y: 100, opacity:0,  stagger: 0.25 });
     gsap.from(".testemonial", {scrollTrigger: ".testemonial", y: 100, opacity:0,  stagger: 0.25 });
+
+	// parallax
+
+	const yellowPlanet = document.getElementById("yellow-planet")
+	const pinkPlanet = document.getElementById("pink-planet")
+	const star = document.getElementById("star")
+
+
+	window.addEventListener("scroll", function(){
+    let value = window.scrollY;
+	yellowPlanet.style.top = -value * 0.05 + "px"
+	yellowPlanet.style.left = -value * 0.05 + "px"
+	pinkPlanet.style.top = -value * 0.05 + "px"
+	pinkPlanet.style.left = -value * 0.05 + "px"
+	star.style.top = (-value - 470) * 0.08 + "px"
+	
+
+
+})
+
+
+
 </script>
 
 

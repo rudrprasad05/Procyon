@@ -1,3 +1,14 @@
+<style>
+
+#eyes{
+    transform-origin: 20% 80%;
+
+    transition: 0.05s;
+
+}
+
+</style>
+
 <footer class="w-4/5 bg-procyon-highlight-purple mx-auto justify-between pr-96 flex text-sm text-secondary-color p-5 rounded-md relative border border-purple-500">
 
     <div class="">
@@ -50,7 +61,48 @@
     <p>
     © 2023 Copyright | Procyon
     </p>
-    <div class="absolute -scale-x-100 bottom-0 right-32 w-1/5 z-10">
-        <img src="/images/satelite.png" alt="" class="w-full">
+    <div class="absolute -scale-x-100 bottom-0 right-32 w-1/5 z-10" >
+        <img src="/images/sat_base.png" alt="" class="w-full absolute bottom-0 left-0" id="anchor">
+        <img src="/images/dish.png" alt="" class="w-3/4 relative -top-6 left-24 -rotate-45" id='eyes'>
     </div>
 </div>
+
+<script>
+
+
+
+document.addEventListener("mousemove", (e) => {
+
+    const mouseX = e.clientX
+    const mouseY = e.clientY
+
+    const anchor = document.getElementById("anchor")
+    const rekt = anchor.getBoundingClientRect()
+    const anchorX = rekt.left + rekt.width / 2
+    const anchorY = rekt.top + rekt.height / 2
+
+    const angleDeg = angle(mouseX, mouseY, anchorX, anchorY)
+
+    const eyes = document.getElementById("eyes")
+
+   
+   if (angleDeg > 60 && angleDeg < 110){
+eyes.style.transform = `rotate(-${-45 + angleDeg}deg)`
+
+   }
+    
+
+console.log(angleDeg)
+
+
+})
+
+function angle(cx, cy, ex, ey){
+    const dy = ey - cy
+    const dx = ex - cx
+    const rad = Math.atan2(dy, dx);
+    const deg = rad * 180 / Math.PI // change rad to deg
+    return deg
+}
+
+</script> 
