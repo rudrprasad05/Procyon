@@ -1,0 +1,30 @@
+---
+import CircleDesigns from "./circleDesigns.astro";
+const {name, number, desc} = Astro.props
+
+---
+
+<style>
+    .outline-text{
+        color: black;
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #C4B5FD;
+    }
+
+</style>
+
+<div class="relative flex flex-col rounded-md bg-procyon-highlight-purple aspect-square p-3  overflow-clip border border-purple-500
+   z-10 works">
+    <p class="mt-4 text-4xl outline-text">
+        {number}
+    </p>
+    <p class="text-white text-2xl font-extrabold h-min my-4">
+        {name}
+    </p>
+    <p class="grow z-10 text-white">
+        {desc}
+    </p>
+    
+    <CircleDesigns></CircleDesigns>
+</div>
