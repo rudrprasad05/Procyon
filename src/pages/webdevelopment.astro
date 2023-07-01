@@ -36,8 +36,8 @@ import HowItWorks from "../components/howItWorks.astro";
 
 
 		</div>
-        <div class="w-1/2">
-            <img class="w-2/3 -scale-x-100 m-auto" src="/images/astronaut.png" alt="">
+        <div class="w-1/2  -scale-x-100">
+            <img id="astronaut" class="w-2/3 m-auto" src="/images/astronaut.png" alt="">
         </div>
 
 		
@@ -206,3 +206,19 @@ import HowItWorks from "../components/howItWorks.astro";
     gsap.from(".prices", {scrollTrigger: ".prices", y: 100, opacity:0,  stagger: 0.3 });
     gsap.from(".works", {scrollTrigger: ".works", y: 100, opacity:0,  stagger: 0.3 });
 </script>
+
+<style >
+    #astronaut {
+        animation: float 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+</style>

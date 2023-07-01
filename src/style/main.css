@@ -12,7 +12,7 @@
     }
 
     .btn{
-        @apply opacity-100 py-2 px-6 rounded-3xl mr-5 transition duration-200 ease-linear
+        @apply opacity-100 py-2 px-6 rounded-3xl transition duration-200 ease-linear
     }
 
     .counter-svg{
@@ -24,11 +24,11 @@
     }
 
     .services-cards{
-        @apply relative grid h-full rounded-md bg-procyon-highlight-purple aspect-square p-3 overflow-clip border border-purple-500
+        @apply relative grid rounded-md bg-procyon-highlight-purple p-3 overflow-clip border border-purple-500
     }
 
     .service-card-img{
-        @apply w-8 h-8 ml-3 mt-3 
+        @apply w-8 h-8
     }
 
     .footer-p{
@@ -97,7 +97,9 @@
 
 body {
     background-color: #3b0764;
+    overflow: hidden;
 }
+
 
 .h1 {
     /* font-family: "GrahamPotta"; */
@@ -136,7 +138,18 @@ body {
     filter: drop-shadow(0px 0px 50px #FF914D);
   }
 
-  .glow2 {
+.glow2 {
+    -webkit-filter: drop-shadow(0px 0px 50px #c800ffca);
+    filter: drop-shadow(0px 0px 50px #c800ffca);
+  }
+
+  .glow3 {
     -webkit-filter: drop-shadow(0px 0px 10px rgb(220, 170, 90));
     filter: drop-shadow(0px 0px 10px rgb(220, 230, 90));
   }
+
+  .glow4 {
+    -webkit-filter: drop-shadow(0px 0px 10px rgb(220, 170, 90));
+    filter: drop-shadow(0px 0px 10px rgb(255, 75, 240));
+  }
+
