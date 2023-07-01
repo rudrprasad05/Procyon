@@ -14,10 +14,10 @@ import HowItWorks from "../components/howItWorks.astro";
 
 
     <!-- landing -->
-    <div class="relative h-90v flex flex-row items-center justify-center m-auto w-4/5 hero">
+    <div class="relative h-90v flex flex-col md:flex-row items-center justify-around m-auto w-full md:w-4/5 hero">
 
         
-		<div class="w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
+		<div class="w-11/12 md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
 			<p class="h-min font-extrabold italic text-6xl pb-5">
                 <span class="word">Create</span> 
                 <span class="word">a</span> 
@@ -28,19 +28,19 @@ import HowItWorks from "../components/howItWorks.astro";
                 <span class="word">Stellar</span>
                 
             </p>
-			<div class="flex h-min w-max">
-				<div class="heroBtn">
-                    <button class="btn font-semibold tracking-wider burningBtn">Pricing</button>
+			<div class="flex justify-between h-min w-full md:w-min">
+				<div class="heroBtn mr-5 w-1/2">
+                    <button class="w-full btn font-semibold tracking-wider burningBtn">Pricing</button>
                 </div>
 
-				<div class="heroBtn">
-                    <button class="btn font-semibold tracking-wider border-2 border-amber-600">Features</button>
+				<div class="heroBtn w-1/2">
+                    <button class="w-full btn font-semibold tracking-wider border-2 border-amber-600">Features</button>
                 </div>
 			</div>
 
 
 		</div>
-        <div class="w-1/2 relative" id="ast-div">
+        <div class="w-full md:w-1/2 relative" id="ast-div">
             <img class="w-2/3 m-auto glow3 relative" src="/images/astronaut.png" alt="" id="ast">
         </div>
 
@@ -49,12 +49,12 @@ import HowItWorks from "../components/howItWorks.astro";
 	</div>
 
     <!-- services -->
-    <p class="text-white text-5xl text-center font-extrabold mb-16">
+    <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
         What We Have to Offer
     </p>
-    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
+    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
-        <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm rotate-45">
+        <div class="w-full md:w-1/2 absolute -top-2/5 -left-1/3 z-0 blur-sm rotate-45">
 			<img src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
 		</div>
 		
@@ -100,7 +100,7 @@ import HowItWorks from "../components/howItWorks.astro";
 
     <div class="relative mb-40">
     
-        <p class="text-white text-5xl text-center font-extrabold mb-16">
+		<p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
             Our Prices
         </p>
 
@@ -155,17 +155,17 @@ import HowItWorks from "../components/howItWorks.astro";
             Use3="Banking Systems"
         />
 
-         <div class="w-4/12 absolute top-20 -right-16 -z-10 blur-sm -rotate-45">
+         <div class="w-full md:w-5/12 absolute -top-40 -right-40 -z-10 blur-sm -rotate-45">
 			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
 		</div>
 
     </div>
     
-    <p class="text-white text-5xl text-center font-extrabold mb-16">
+    <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
         How it Works
     </p>
-    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
-        <div class="w-5/12 absolute top-24 -left-1/4 z-0 blur-sm rotate-45">
+    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
+        <div class="w-2/3 md:w-4/12 absolute -top-72 -left-1/4 z-0 blur-sm rotate-45">
 			<img src="/images/red-planet.png" alt="" class="w-full relative" id="red-planet">
 		</div>
 
@@ -201,18 +201,6 @@ import HowItWorks from "../components/howItWorks.astro";
         />
     </div>
 
-    <div class="w-4/5 flex mt-10 mb-40 mx-auto">
-        <a href="" class="flex items-center ml-auto text-white" >
-            <p>
-                Learn more
-            </p>
-            <span class="ml-2">
-                <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
-            </span>
-        </a>
-    </div>
-
-
 </Base>
 
 
@@ -236,12 +224,12 @@ import HowItWorks from "../components/howItWorks.astro";
     window.addEventListener("scroll", function(){
 
         let value = window.scrollY;
-        orangePlanet.style.top = value * 0.05 + "px"
-        orangePlanet.style.left = value * 0.05 + "px"
-        bluePlanet.style.top = value * 0.05 + "px"
-        bluePlanet.style.right = value * 0.05 + "px"
-        redPlanet.style.top = value * 0.05 + "px"
-        redPlanet.style.left = value * 0.05 + "px"
+        orangePlanet.style.top = value * 0.15 + "px"
+        orangePlanet.style.left = value * 0.15 + "px"
+        bluePlanet.style.top = value * 0.15 + "px"
+        bluePlanet.style.right = value * 0.15 + "px"
+        redPlanet.style.top = value * 0.15 + "px"
+        redPlanet.style.left = value * 0.15 + "px"
        
         astDiv.style.transform = `translateX(${value * 0.5}px`
         ast.style.transform = `rotate(${value * 0.2}deg) `
