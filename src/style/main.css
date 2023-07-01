@@ -44,6 +44,8 @@
 
 *{
     font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
 
 .burningBtn {

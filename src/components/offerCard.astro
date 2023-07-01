@@ -1,6 +1,6 @@
 ---
 import CircleDesigns from "./circleDesigns.astro";
-const {name, svg} = Astro.props
+const {name, svg, desc} = Astro.props
 
 ---
 
@@ -12,8 +12,8 @@ const {name, svg} = Astro.props
     <p class="text-white text-2xl font-extrabold h-min my-12">
         {name}
     </p>
-    <p class="grow z-10 text-white text-sm">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis reiciendis, ratione quo veniam expedita omnis, magnam provident molestias non fugiat pariatur a iste ullam reprehenderit, ex ducimus cupiditate iusto?
+    <p class="grow z-10 text-white text-base leading-6">
+        {desc}
     </p>
     
     <CircleDesigns></CircleDesigns>
