@@ -7,12 +7,20 @@ import Prices from "../components/prices.astro";
 import HowItWorks from "../components/howItWorks.astro";
 ---
 
+<style>
+
+
+
+</style>
+
 <Base title="Web Development">
 
 
-    <!-- landing -->
-    <div class="relative h-90v flex flex-row items-center justify-center m-auto w-4/5">
 
+    <!-- landing -->
+    <div class="relative h-90v flex flex-row items-center justify-center m-auto w-4/5 hero">
+
+        
 		<div class="w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
 			<p class="h-min font-extrabold italic text-6xl pb-5">
                 <span class="word">Create</span> 
@@ -36,8 +44,8 @@ import HowItWorks from "../components/howItWorks.astro";
 
 
 		</div>
-        <div class="w-1/2">
-            <img class="w-2/3 -scale-x-100 m-auto" src="/images/astronaut.png" alt="">
+        <div class="w-1/2" id="ast-div">
+            <img class="w-2/3 m-auto glow3 relative" src="/images/astronaut.png" alt="" id="ast">
         </div>
 
 		
@@ -51,7 +59,7 @@ import HowItWorks from "../components/howItWorks.astro";
     <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
 
         <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm rotate-45">
-			<img src="/images/orange-planet.png" alt="" class="w-full">
+			<img src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
 		</div>
 		
         <OfferCard
@@ -151,8 +159,8 @@ import HowItWorks from "../components/howItWorks.astro";
             Use3="Banking Systems"
         />
 
-         <div class="w-4/12 absolute top-32 -right-16 -z-10 blur-sm -rotate-45">
-			<img src="/images/blue-planet.png" alt="" class="w-full z-0">
+         <div class="w-4/12 absolute top-20 -right-16 -z-10 blur-sm -rotate-45">
+			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
 		</div>
 
     </div>
@@ -160,40 +168,57 @@ import HowItWorks from "../components/howItWorks.astro";
     <p class="text-white text-5xl text-center font-extrabold mb-16">
         How it Works
     </p>
-    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40">
-        <div class="w-5/12 absolute top-1/3 -left-1/4 z-0 blur-sm rotate-45">
-			<img src="/images/red-planet.png" alt="" class="w-full">
+    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
+        <div class="w-5/12 absolute top-24 -left-1/4 z-0 blur-sm rotate-45">
+			<img src="/images/red-planet.png" alt="" class="w-full relative" id="red-planet">
 		</div>
 
         <HowItWorks
             number="01"
             name="Planning"
-            desc=" During the planning phase, we will understand you goals, requirements, and target audience. Next we'll present our design for your approval. Once you fall in love with it, we'll seamlessly progress to the next stage, turning your dreams into reality"
+            desc=" During the planning phase, we will understand you goals, requirements, and target audience. This involves conducting research, gathering information, and defining the project scope, objectives, and timelines. The firm may also create a project roadmap and identify the necessary resources and technologies"
         />
         <HowItWorks
             number="02"
             name="Designing"
+            desc=" In the designing phase, we'll focus on creating the visual and functional aspects of the website or web application.We'll work closely with you to develop a captivating and user-friendly design that aligns with the your brand identity"
         />
         <HowItWorks
             number="03"
             name="Deposit"
+            desc="After the design phase, you will provide a deposit or an upfront payment of 25% to initiate the development process. This payment ensures commitment from both parties and helps cover initial expenses, such as resource allocation and project setup"
         />
         <HowItWorks
             number="04"
             name="Development"
+            desc="In the development phase, we'll bring the approved design to life by implementing the technical elements of the website or web application. We'll use programming languages, frameworks, and content management systems to build the required functionality, integrate databases, and ensure cross-browser compatibility. "
         />
         <HowItWorks
             number="05"
             name="Final Touches"
+            desc="Once the development phase is complete, we'll focus on optimizing the website or web application for performance, speed, and user experience. We'll conduct thorough testing, identify and fix any bugs or errors, and optimize the code, images, and other assets to ensure efficient loading times and smooth functionality."
         />
         <HowItWorks
             number="06"
             name="Final Payment"
+            desc="Upon successful completion of the development and optimization phases, the client is required to make the final payment to the web development firm. This payment confirms the acceptance of the completed work and enables the transfer of ownership"
         />
+    </div>
+
+    <div class="w-4/5 flex mt-10 mb-40 mx-auto">
+        <a href="" class="flex items-center ml-auto text-white" >
+            <p>
+                Learn more
+            </p>
+            <span class="ml-2">
+                <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
+            </span>
+        </a>
     </div>
 
 
 </Base>
+
 
 <script>
     import { gsap } from 'gsap';
@@ -205,4 +230,30 @@ import HowItWorks from "../components/howItWorks.astro";
     gsap.from(".offer", {scrollTrigger: ".offer", y: 100, opacity:0,  stagger: 0.3 });
     gsap.from(".prices", {scrollTrigger: ".prices", y: 100, opacity:0,  stagger: 0.3 });
     gsap.from(".works", {scrollTrigger: ".works", y: 100, opacity:0,  stagger: 0.3 });
+
+    const orangePlanet = document.getElementById('orange-planet')
+    const bluePlanet = document.getElementById('blue-planet')
+    const redPlanet = document.getElementById('red-planet')
+    const ast = document.getElementById("ast")
+    const astDiv = document.getElementById("ast-div")
+
+    window.addEventListener("scroll", function(){
+
+        let value = window.scrollY;
+        orangePlanet.style.top = value * 0.05 + "px"
+        orangePlanet.style.left = value * 0.05 + "px"
+        bluePlanet.style.top = value * 0.05 + "px"
+        bluePlanet.style.right = value * 0.05 + "px"
+        redPlanet.style.top = value * 0.05 + "px"
+        redPlanet.style.left = value * 0.05 + "px"
+       
+        astDiv.style.transform = `translateX(${value * 0.5}px`
+        ast.style.transform = `rotate(${value * 0.2}deg) `
+       
+        
+
+
+    })
 </script>
+
+
