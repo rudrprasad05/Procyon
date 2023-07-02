@@ -56,18 +56,18 @@ import OurWorks from "../components/OurWorks.astro";
     </p>
     <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
 
-        <div class="w-6/12 absolute -top-60 -left-1/3 z-0 blur-sm rotate-45">
+        <div class="w-6/12 absolute -top-60 -left-1/3 z-0 blur-sm">
 			<img src="/images/planet4.png" alt="" class="w-full relative glow4" id="orange-planet">
 		</div>
 		
         <OfferCard
-            name="Logo"
+            name="Hardware"
             svg="/images/svg/write.svg"
             desc="Unleash the power of WordPress for your online presence! Our expert team specializes in crafting stunning, feature-rich WordPress websites"
         />
 
         <OfferCard
-            name="Bill Boards"
+            name="Software"
             svg="/images/svg/calendar.svg"
             desc="Ensure top-notch security with SSL certificates and user authentication on your website with our robust solutions. Safeguard sensitive data and protect user accounts from unauthorized access. "
         />
@@ -169,7 +169,7 @@ import OurWorks from "../components/OurWorks.astro";
         How it Works
     </p>
     <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
-        <div class="w-5/12 absolute -top-96 -left-1/4 z-0 blur-sm rotate-45">
+        <div class="w-5/12 absolute -top-96 -left-1/4 z-0 blur-sm">
 			<img src="/images/planet6.png" alt="" class="w-full relative glow6" id="red-planet">
 		</div>
 
@@ -192,7 +192,7 @@ import OurWorks from "../components/OurWorks.astro";
     </div>
 
     <div class="w-4/5 flex mt-10 mb-40 mx-auto">
-        <a href="" class="flex items-center ml-auto text-white" >
+        <a href="/terms" class="flex items-center ml-auto text-white" >
             <p>
                 Learn more
             </p>
@@ -246,11 +246,11 @@ import OurWorks from "../components/OurWorks.astro";
 
         let value = window.scrollY;
         orangePlanet.style.top = value * 0.15 + "px"
-        orangePlanet.style.left = value * 0.15 + "px"
+        
         bluePlanet.style.top = value * 0.15 + "px"
     
         redPlanet.style.top = value * 0.15 + "px"
-        redPlanet.style.left = value * 0.15 + "px"
+        
        
         astDiv.style.transform = `translateX(${value * 0.5}px`
         ast.style.transform = `rotate(${value * 0.2}deg) `
