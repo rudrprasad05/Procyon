@@ -42,7 +42,7 @@ import OurWorks from "../components/OurWorks.astro";
 
 		</div>
         <div class="w-full md:w-1/2 relative" id="ast-div">
-            <img class="w-2/3 m-auto glow3 relative" src="/images/astronaut.png" alt="" id="ast">
+            <img class="w-2/3 m-auto relative" src="/images/rocket.png" alt="" id="ast">
         </div>
 
 		
@@ -50,38 +50,53 @@ import OurWorks from "../components/OurWorks.astro";
 	</div>
 
     <!-- services -->
-    <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
+    <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10" id="services">
         What We Have to Offer
     </p>
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
-        <div class="w-full md:w-1/2 absolute -top-2/5 -left-1/3 z-0 blur-sm rotate-45">
-			<img src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
+        <div class="w-full md:w-1/2 absolute -top-2/5 -left-1/3 z-0 blur-sm">
+			<img src="/images/orange-planet.png" alt="" class="w-full relative glow-yellow" id="orange-planet">
 		</div>
 		
+            
         <OfferCard
             name="WordPress"
             svg="/images/svg/write.svg"
             desc="Unleash the power of WordPress for your online presence! Our expert team specializes in crafting stunning, feature-rich WordPress websites"
         />
+        
+        
 
+    
         <OfferCard
             name="User Authentication"
             svg="/images/svg/user.svg"
             desc="Ensure top-notch security with SSL certificates and user authentication on your website with our robust solutions. Safeguard sensitive data and protect user accounts from unauthorized access. "
         />
-       
+    
+        
+        
+    
         <OfferCard
             name="Database & Hosting"
             svg="/images/svg/data.svg"
             desc="Unlock the power of streamlined performance with our cutting-edge database and hosting solutions. Seamlessly store and retrieve data, ensuring lightning-fast access to vital information."
         />
+    
+        
 
+
+    
         <OfferCard
             name="E-Commerce"
             svg="/images/svg/creditCard.svg"
             desc="Step into the world of e-commerce success with our comprehensive solutions. Our expert team will help you build a powerful online store that drives sales and maximizes revenue."
         />
+    
+        
+
+    
         <OfferCard
             name="Custom Solution"
             svg="/images/svg/custom.svg"
@@ -89,11 +104,19 @@ import OurWorks from "../components/OurWorks.astro";
         />
         
 
-         <OfferCard
-            name="Lighting Fast"
-            svg="/images/svg/bolt.svg"
-            desc="Experience the speed and responsiveness you've been waiting for! Our websites are optimized for lightning-fast performance, ensuring swift loading times and seamless user interactions for any device"
+    
+        
+    
+
+        <OfferCard
+        name="Lighting Fast"
+        svg="/images/svg/bolt.svg"
+        desc="Experience the speed and responsiveness you've been waiting for! Our websites are optimized for lightning-fast performance, ensuring swift loading times and seamless user interactions for any device"
         />
+
+
+
+    
 
 
         
@@ -106,6 +129,10 @@ import OurWorks from "../components/OurWorks.astro";
 		<p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
             Our Prices
         </p>
+
+        <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm ">
+			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative glow-blue" id="blue-planet">
+		</div>
 
         <Prices 
             bundle="Nebula"
@@ -158,9 +185,7 @@ import OurWorks from "../components/OurWorks.astro";
             Use3="Banking Systems"
         />
 
-         <div class="w-full md:w-5/12 absolute -top-40 -right-40 -z-10 blur-sm -rotate-45">
-			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
-		</div>
+        
 
     </div>
 
@@ -176,8 +201,8 @@ import OurWorks from "../components/OurWorks.astro";
         How it Works
     </p>
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
-        <div class="w-2/3 md:w-4/12 absolute -top-72 -left-1/4 z-0 blur-sm rotate-45">
-			<img src="/images/red-planet.png" alt="" class="w-full relative" id="red-planet">
+        <div class="w-2/3 md:w-4/12 absolute -top-72 -left-1/4 z-0 blur-sm">
+			<img src="/images/red-planet.png" alt="" class="w-full relative glow-red" id="red-planet">
 		</div>
 
         <HowItWorks
@@ -211,9 +236,37 @@ import OurWorks from "../components/OurWorks.astro";
             desc="Upon successful completion of the development and optimization phases, the client is required to make the final payment to the web development firm. This payment confirms the acceptance of the completed work and enables the transfer of ownership"
         />
     </div>
+    <div class="w-4/5 flex mt-10 mb-40 mx-auto">
+        <a href="" class="flex items-center ml-auto text-white" >
+            <p>
+                Learn more
+            </p>
+            <span class="ml-2">
+                <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
+            </span>
+        </a>
+    </div>
 
 </Base>
 
+<style>
+
+    .glow-yellow{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(220, 170, 90));
+        filter: drop-shadow(0px 0px 50px rgb(220, 230, 90));
+    }
+
+    .glow-blue{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(130, 200, 240));
+        filter: drop-shadow(0px 0px 50px rgb(130, 200, 240));
+    }
+
+    .glow-red{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(130, 200, 240));
+        filter: drop-shadow(0px 0px 50px rgb(190, 70, 60));
+    }
+
+</style>
 
 <script>
     import { gsap } from 'gsap';
@@ -235,15 +288,15 @@ import OurWorks from "../components/OurWorks.astro";
     window.addEventListener("scroll", function(){
 
         let value = window.scrollY;
-        orangePlanet.style.top = value * 0.15 + "px"
-        orangePlanet.style.left = value * 0.15 + "px"
-        bluePlanet.style.top = value * 0.15 + "px"
-        bluePlanet.style.right = value * 0.15 + "px"
-        redPlanet.style.top = value * 0.15 + "px"
-        redPlanet.style.left = value * 0.15 + "px"
+        orangePlanet.style.top = (value * 0.15) + "px"
+        
+        bluePlanet.style.top = (value * 0.15) + "px"
+        
+        redPlanet.style.top = (value * 0.15) + "px"
+        
        
         astDiv.style.transform = `translateX(${value * 0.5}px`
-        ast.style.transform = `rotate(${value * 0.2}deg) `
+        ast.style.transform = `translateY(${-value * 0.2}px) `
        
         
 

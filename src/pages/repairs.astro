@@ -1,0 +1,262 @@
+---
+import Base from "../layout/base.astro";
+import "../style/main.css"
+
+import OfferCard from "../components/offerCard.astro";
+import Prices from "../components/prices.astro";
+import HowItWorks from "../components/howItWorks.astro";
+import OurWorks from "../components/OurWorks.astro";
+---
+
+
+
+<Base title="Computer Repairs">
+
+
+
+    <!-- landing -->
+    <div class="relative h-90v flex flex-col md:flex-row items-center justify-around m-auto w-full md:w-4/5 hero">
+
+        
+		<div class="w-11/12 md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
+			<p class="h-min font-extrabold italic text-6xl pb-5">
+                <span class="word">Create</span> 
+                <span class="word">a</span> 
+                <span class="word">Web</span> <br>
+                <span class="word">Presence</span>
+                <span class="word">that's</span> <br>
+                <span class="word">Truly</span>
+                <span class="word">Stellar</span>
+                
+            </p>
+			<div class="flex justify-between h-min w-full md:w-min">
+				<div class="heroBtn mr-5 w-1/2">
+                    <button class="w-full btn font-semibold tracking-wider burningBtn">Pricing</button>
+                </div>
+
+				<div class="heroBtn w-1/2">
+                    <button class="w-full btn font-semibold tracking-wider border-2 border-amber-600">Features</button>
+                </div>
+			</div>
+
+
+		</div>
+        <div class="w-1/2 relative" id="ast-div">
+            <img class="w-2/3 m-auto relative" src="/images/astronaut.png" alt="" id="ast">
+        </div>
+
+		
+	
+	</div>
+
+    <!-- services -->
+       <!-- services -->
+    <p class="text-white text-5xl text-center font-extrabold mb-16" id="services">
+        What We Have to Offer
+    </p>
+    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
+
+        <div class="w-6/12 absolute -top-60 -left-1/3 z-0 blur-sm">
+			<img src="/images/planet4.png" alt="" class="w-full relative glow4" id="orange-planet">
+		</div>
+		
+        <OfferCard
+            name="Hardware"
+            svg="/images/svg/write.svg"
+            desc="Unleash the power of WordPress for your online presence! Our expert team specializes in crafting stunning, feature-rich WordPress websites"
+        />
+
+        <OfferCard
+            name="Software"
+            svg="/images/svg/calendar.svg"
+            desc="Ensure top-notch security with SSL certificates and user authentication on your website with our robust solutions. Safeguard sensitive data and protect user accounts from unauthorized access. "
+        />
+       
+        <OfferCard
+            name="Social Media"
+            svg="/images/svg/share.svg"
+            desc="Unlock the power of streamlined performance with our cutting-edge database and hosting solutions. Seamlessly store and retrieve data, ensuring lightning-fast access to vital information."
+        />
+
+        <OfferCard
+            name="International Marketing"
+            svg="/images/svg/globe.svg"
+            desc="Step into the world of e-commerce success with our comprehensive solutions. Our expert team will help you build a powerful online store that drives sales and maximizes revenue."
+        />
+        <OfferCard
+            name="Custom Solution"
+            svg="/images/svg/custom.svg"
+            desc="Experience the ultimate in website customization with our bespoke solutions. Our dedicated team will work closely with you to understand your unique requirements and bring your vision to life"
+        />
+        
+
+         <OfferCard
+            name="Business Cards"
+            svg="/images/svg/case.svg"
+            desc="Experience the speed and responsiveness you've been waiting for! Our websites are optimized for lightning-fast performance, ensuring swift loading times and seamless user interactions for any device"
+        />
+
+
+        
+    </div>
+
+    <div class="relative mb-40">
+    
+        <p class="text-white text-5xl text-center font-extrabold mb-16">
+            Our Prices
+        </p>
+
+        <div class="w-4/12 absolute -top-60 -right-16 z-0 blur-sm">
+			<img src="/images/planet5.png" alt="" class="w-full z-0 relative glow5" id="blue-planet">
+		</div>
+
+        <Prices 
+            bundle="Space Rocks"
+            price="$15"
+
+            Feature1="Single Design"
+            Feature2="Custom"
+            Feature3="1 Day Delivery"
+
+            Tech1="Canva"
+            Tech2="Photoshop"
+            Tech3="Gimp"
+
+            Use1="Social Media"
+            Use2="Small Business"
+            Use3="Event Promos"
+        />
+
+        <Prices 
+            bundle="Asteroid"
+            price="$50"
+
+            Feature1="Max 5 designs"
+            Feature2="Custom"
+            Feature3="2 Days Delivery"
+
+            Tech1="Canva"
+            Tech2="Photoshop"
+            Tech3="Gimp"
+
+            Use1="Social Media"
+            Use2="Newspaper"
+            Use3="TV"
+        />
+
+        <Prices 
+            bundle="Comet"
+            price="$100"
+
+            Feature1="Max 10 Designs"
+            Feature2="Logo"
+            Feature3="Business Cards"
+
+            Tech1="Canva"
+            Tech2="Photoshop"
+            Tech3="Gimp"
+
+            Use1="Business Cards"
+            Use2="Logo Design"
+            Use3="Advertisements"
+        />
+
+         
+
+    </div>
+    
+    <p class="text-white text-5xl text-center font-extrabold mb-16">
+        How it Works
+    </p>
+    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
+        <div class="w-5/12 absolute -top-96 -left-1/4 z-0 blur-sm">
+			<img src="/images/planet6.png" alt="" class="w-full relative glow6" id="red-planet">
+		</div>
+
+        <HowItWorks
+            number="01"
+            name="Planning"
+            desc=" During the planning phase, we will understand you goals, requirements, and target audience. This involves conducting research, gathering information, and defining the project scope, objectives, and timelines."
+        />
+        <HowItWorks
+            number="02"
+            name="Designing"
+            desc=" In the designing phase, we'll focus on creating the visual and functional aspects. We'll work closely with you to develop a captivating and user-friendly design that aligns with the your brand identity"
+        />
+        <HowItWorks
+            number="03"
+            name="Payment"
+            desc="After the design phase, you will provide a the full payment to finalise the transaction. We will then provide you with the design without the watermark"
+        />
+       
+    </div>
+
+    <div class="w-4/5 flex mt-10 mb-40 mx-auto">
+        <a href="/terms" class="flex items-center ml-auto text-white" >
+            <p>
+                Learn more
+            </p>
+            <span class="ml-2">
+                <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
+            </span>
+        </a>
+    </div>
+
+
+</Base>
+
+<style>
+
+.glow4{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(130, 200, 240));
+    }
+
+    .glow5{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(200, 100, 120));
+    }
+
+    .glow6{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(210, 110, 90));
+    }
+
+</style>
+
+
+<script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger)
+    const tl = gsap.timeline()
+
+   
+    gsap.from(".offer", {scrollTrigger: ".offer", y: 100, opacity:0,  stagger: 0.3 });
+    gsap.from(".prices", {scrollTrigger: ".prices", y: 100, opacity:0,  stagger: 0.3 });
+    gsap.from(".works", {scrollTrigger: ".works", y: 100, opacity:0,  stagger: 0.3 });
+
+    const orangePlanet = document.getElementById('orange-planet')
+    const bluePlanet = document.getElementById('blue-planet')
+    const redPlanet = document.getElementById('red-planet')
+    const ast = document.getElementById("ast")
+    const astDiv = document.getElementById("ast-div")
+
+    window.addEventListener("scroll", function(){
+
+        let value = window.scrollY;
+        orangePlanet.style.top = value * 0.15 + "px"
+        
+        bluePlanet.style.top = value * 0.15 + "px"
+    
+        redPlanet.style.top = value * 0.15 + "px"
+        
+       
+        astDiv.style.transform = `translateX(${value * 0.5}px`
+        ast.style.transform = `rotate(${value * 0.2}deg) `
+       
+        
+
+
+    })
+</script>
