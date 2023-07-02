@@ -58,7 +58,7 @@
 
 
 <div class="text-secondary-color  text-center text-base p-5 relative">
-    <p>
+    <p id="date">
     © 2023 Copyright | Procyon
     </p>
     <div class="absolute -scale-x-100 bottom-0 right-32 w-1/5 z-10" >
@@ -108,5 +108,11 @@ function angle(cx, cy, ex, ey){
     const deg = rad * 180 / Math.PI // change rad to deg
     return deg
 }
+
+const date = new Date();
+let year = date.getFullYear()
+let dateText = document.getElementById("date")
+
+dateText.innerHTML = `© ${year} Copyright | Procyon`
 
 </script> 
