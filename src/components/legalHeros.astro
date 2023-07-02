@@ -1,5 +1,5 @@
 ---
-const {name, path} = Astro.props
+const {name, path, style} = Astro.props
 ---
 
 <div class="flex w-4/5 mx-auto text-secondary-color">
@@ -9,6 +9,7 @@ const {name, path} = Astro.props
         <p class="opacity-50">{name}</p>
     </div>
     <div class="w-1/2">
-        <img src={path} alt="" class=" mx-auto">
+        <img src={path} alt="" class="mx-auto" style={style}>
     </div>
 </div>
+
