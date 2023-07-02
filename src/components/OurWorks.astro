@@ -1,41 +1,84 @@
-<style>
-
-
- .slider_main_cont{
-   
-    
- }
-
-.sliderHolder:hover .slider img {
-    filter: grayscale(0);
- }
-
-
- .sliderHolder {
-    padding: 40px 0px;
-    display: flex;
-    width: fit-content;
-    
-    
- }
-
-
-
-
-
-</style>
-
-<div class='slider_cont w-full mb-40'>
-    <div class="w-4/5 bg-procyon-highlight-purple h-40 mx-auto aspect-square">
-
-        <div class="absolute p-5">
-            <p class="text-2xl text-white">Codology.net</p>
-            <p class="text-lg text-secondary-color">Cosmic Website</p>
-            
-            <button class="py-1 px-8 border-solid border-2 border-secondary-color rounded-full mt-2 text-secondary-color">View</button>
-          
+<div id="daddy" class="flex daddy relative">
+    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
+        <div class="absolute top-0 left-0 p-5">
+            <p class="font-extrabold tracking-wider text-3xl italic text-white">Codeology.net</p>
+            <p class="text-secondary-color text-2xl">Galactic Website</p>
+            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
         </div>
-   
-
+        <img src="/images/w1.jpg" alt="" class="h-full w-full object-cover">
+    </div>
+    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
+        <div class="absolute top-0 left-0 p-5">
+            <p class="font-extrabold tracking-wider text-3xl italic text-white">Jai Narayan College</p>
+            <p class="text-secondary-color text-2xl">Cosmic Website</p>
+            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
+        </div>
+        <img src="/images/w2.jpg" alt="" class="h-full w-full object-cover">
+    </div>
+    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
+        <div class="absolute top-0 left-0 p-5">
+            <p class="font-extrabold tracking-wider text-3xl italic text-white">Kants Rentals</p>
+            <p class="text-secondary-color text-2xl">Cosmic Website</p>
+            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
+        </div>
+        <img src="/images/w3.jpg" alt="" class="h-full w-full object-cover">
+    </div>
+    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
+        <div class="absolute top-0 left-0 p-5">
+            <p class="font-extrabold tracking-wider text-3xl italic text-white">Computer 1</p>
+            <p class="text-secondary-color text-2xl">Galactic Website</p>
+            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
+        </div>
+        <img src="/images/w4.jpg" alt="" class="h-full w-full object-cover">
+    </div>
+    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
+        <div class="absolute top-0 left-0 p-5">
+            <p class="font-extrabold tracking-wider text-3xl italic text-white">Bismuth Web Dev</p>
+            <p class="text-secondary-color text-2xl">Cosmic Website</p>
+            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
+        </div>
+        <img src="/images/w5.jpg" alt="" class="h-full w-full object-cover">
+    </div>
+    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
+        <div class="absolute top-0 left-0 p-5">
+            <p class="font-extrabold tracking-wider text-3xl italic text-white">Personal Porffolio</p>
+            <p class="text-secondary-color text-2xl">Nebula Website</p>
+            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
+        </div>
+        <img src="/images/w6.jpg" alt="" class="h-full w-full object-cover">
     </div>
 </div>
+
+<style>
+    .daddy {
+        width: calc(600% + 300px);
+        height: 100%;
+    }
+
+    .panel {
+        height: 440px;
+        margin-right: 50px;
+    }
+</style>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    let sections = gsap.utils.toArray(".panel");
+
+    gsap.to(sections, {
+    xPercent: -100 * (sections.length - 0.75),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".daddy",
+        pin: true,
+        start: "-50px",
+        scrub: 0.5,
+        // snap: 1 / (sections.length - 0.75),
+        end: () => "+=" + document.getElementById("daddy").offsetWidth
+    }
+});
+
+</script>
