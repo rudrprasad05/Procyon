@@ -24,7 +24,7 @@
     }
 
     .services-cards{
-        @apply relative grid rounded-md bg-procyon-highlight-purple p-3 overflow-clip border border-purple-500
+        @apply relative  rounded-md bg-procyon-highlight-purple p-3 overflow-clip border border-purple-500
     }
 
     .service-card-img{
