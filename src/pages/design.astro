@@ -59,13 +59,13 @@ import HowItWorks from "../components/howItWorks.astro";
  
 
 <!-- services -->
-    <p class="text-white text-5xl text-center font-extrabold mb-16">
+    <p class="text-white text-5xl text-center font-extrabold mb-16" id="services">
         What We Have to Offer
     </p>
     <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
 
-        <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm rotate-45">
-			<img src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
+        <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm">
+			<img src="/images/planet1.png" alt="" class="w-full relative glow1" id="orange-planet">
 		</div>
 		
         <OfferCard
@@ -109,8 +109,8 @@ import HowItWorks from "../components/howItWorks.astro";
     </div>
 
     <div class="relative mb-40">
-    <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm -rotate-45">
-			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
+    <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm ">
+			<img src="/images/planet2.png" alt="" class="w-full z-0 relative glow2" id="blue-planet">
 		</div>
         <p class="text-white text-5xl text-center font-extrabold mb-16">
             Our Prices
@@ -175,8 +175,8 @@ import HowItWorks from "../components/howItWorks.astro";
         How it Works
     </p>
     <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
-        <div class="w-5/12 absolute bottom-24 -left-1/4 z-0 blur-sm rotate-45">
-			<img src="/images/red-planet.png" alt="" class="w-full relative" id="red-planet">
+        <div class="w-5/12 absolute bottom-24 -left-1/4 z-0 blur-sm ">
+			<img src="/images/planet3.png" alt="" class="w-full relative glow3" id="red-planet">
 		</div>
 
         <HowItWorks
@@ -210,6 +210,25 @@ import HowItWorks from "../components/howItWorks.astro";
 
 </Base>
 
+<style>
+
+    .glow1{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(240, 130, 90));
+    }
+
+    .glow2{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(80, 80, 190));
+    }
+
+    .glow3{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(180, 150, 190));
+    }
+
+</style>
+
 
 <script>
     import { gsap } from 'gsap';
@@ -237,13 +256,11 @@ import HowItWorks from "../components/howItWorks.astro";
 
         let value = window.scrollY;
         orangePlanet.style.top = value * 0.15 + "px"
-        orangePlanet.style.left = value * 0.15 + "px"
         bluePlanet.style.top = value * 0.15 + "px"
-        bluePlanet.style.right = value * 0.15 + "px"
         redPlanet.style.top = value * 0.15 + "px"
-        redPlanet.style.left = value * 0.15 + "px"
+      
        
-        // astDiv.style.transform = `translateX(${value * 0.5}px`
+        
         ast.style.transform = `rotate(${-value * 0.2}deg) `
 
         brushCont.style.transform = `translateX(${value * 0.6}px`
