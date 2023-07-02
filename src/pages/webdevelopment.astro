@@ -42,7 +42,7 @@ import OurWorks from "../components/OurWorks.astro";
 
 		</div>
         <div class="w-full md:w-1/2 relative" id="ast-div">
-            <img class="w-2/3 m-auto glow3 relative" src="/images/astronaut.png" alt="" id="ast">
+            <img class="w-2/3 m-auto relative" src="/images/rocket.png" alt="" id="ast">
         </div>
 
 		
@@ -59,41 +59,64 @@ import OurWorks from "../components/OurWorks.astro";
 			<img src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
 		</div>
 		
-        <OfferCard
-            name="WordPress"
-            svg="/images/svg/write.svg"
-            desc="Unleash the power of WordPress for your online presence! Our expert team specializes in crafting stunning, feature-rich WordPress websites"
-        />
+            <div class="offer">
+                <OfferCard
+                    name="WordPress"
+                    svg="/images/svg/write.svg"
+                    desc="Unleash the power of WordPress for your online presence! Our expert team specializes in crafting stunning, feature-rich WordPress websites"
+                />
+            </div>
+            
 
-        <OfferCard
-            name="User Authentication"
-            svg="/images/svg/user.svg"
-            desc="Ensure top-notch security with SSL certificates and user authentication on your website with our robust solutions. Safeguard sensitive data and protect user accounts from unauthorized access. "
-        />
-       
-        <OfferCard
-            name="Database & Hosting"
-            svg="/images/svg/data.svg"
-            desc="Unlock the power of streamlined performance with our cutting-edge database and hosting solutions. Seamlessly store and retrieve data, ensuring lightning-fast access to vital information."
-        />
+        <div class="offer">
+            <OfferCard
+                name="User Authentication"
+                svg="/images/svg/user.svg"
+                desc="Ensure top-notch security with SSL certificates and user authentication on your website with our robust solutions. Safeguard sensitive data and protect user accounts from unauthorized access. "
+            />
+        </div>
+            
+            
+        <div class="offer">
+            <OfferCard
+                name="Database & Hosting"
+                svg="/images/svg/data.svg"
+                desc="Unlock the power of streamlined performance with our cutting-edge database and hosting solutions. Seamlessly store and retrieve data, ensuring lightning-fast access to vital information."
+            />
+        </div>
+            
 
-        <OfferCard
-            name="E-Commerce"
-            svg="/images/svg/creditCard.svg"
-            desc="Step into the world of e-commerce success with our comprehensive solutions. Our expert team will help you build a powerful online store that drives sales and maximizes revenue."
-        />
-        <OfferCard
-            name="Custom Solution"
-            svg="/images/svg/custom.svg"
-            desc="Experience the ultimate in website customization with our bespoke solutions. Our dedicated team will work closely with you to understand your unique requirements and bring your vision to life"
-        />
-        
 
-         <OfferCard
+        <div class="offer">
+        <OfferCard
+                name="E-Commerce"
+                svg="/images/svg/creditCard.svg"
+                desc="Step into the world of e-commerce success with our comprehensive solutions. Our expert team will help you build a powerful online store that drives sales and maximizes revenue."
+            />
+        </div>
+            
+
+        <div class="offer">
+            <OfferCard
+                name="Custom Solution"
+                svg="/images/svg/custom.svg"
+                desc="Experience the ultimate in website customization with our bespoke solutions. Our dedicated team will work closely with you to understand your unique requirements and bring your vision to life"
+            />
+            
+
+        </div>
+            
+        <div class="offer">
+
+            <OfferCard
             name="Lighting Fast"
             svg="/images/svg/bolt.svg"
             desc="Experience the speed and responsiveness you've been waiting for! Our websites are optimized for lightning-fast performance, ensuring swift loading times and seamless user interactions for any device"
         />
+
+    </div>
+
+        
 
 
         
@@ -242,7 +265,7 @@ import OurWorks from "../components/OurWorks.astro";
         redPlanet.style.left = value * 0.15 + "px"
        
         astDiv.style.transform = `translateX(${value * 0.5}px`
-        ast.style.transform = `rotate(${value * 0.2}deg) `
+        ast.style.transform = `translateY(${-value * 0.2}px) `
        
         
 

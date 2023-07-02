@@ -5,6 +5,7 @@ import "../style/main.css"
 import OfferCard from "../components/offerCard.astro";
 import Prices from "../components/prices.astro";
 import HowItWorks from "../components/howItWorks.astro";
+
 ---
 
 
@@ -38,15 +39,26 @@ import HowItWorks from "../components/howItWorks.astro";
 
 
 		</div>
-        <div class="w-1/2 relative" id="ast-div">
-            <img class="w-2/3 m-auto glow3 relative" src="/images/astronaut.png" alt="" id="ast">
+        
+
+        <div class="w-full md:w-1/2 relative">
+            <img class="w-2/3 m-auto relative" src="/images/waving.png" alt="" id='ast'>
+            <div class="absolute top-0 w-28 z-10" id="brush-cont">
+                <img src="/images/brush.png" alt="" class=" relative top-0 " id="brush">
+            </div>
+             <div class="absolute bottom-0 right-0 w-28 z-10" id="pallete-cont">
+                <img src="/images/pallete.png" alt="" class=" relative top-0 " id="pallete">
+            </div>
+            
         </div>
 
 		
 	
 	</div>
 
-    <!-- services -->
+ 
+
+<!-- services -->
     <p class="text-white text-5xl text-center font-extrabold mb-16">
         What We Have to Offer
     </p>
@@ -97,7 +109,9 @@ import HowItWorks from "../components/howItWorks.astro";
     </div>
 
     <div class="relative mb-40">
-    
+    <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm -rotate-45">
+			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
+		</div>
         <p class="text-white text-5xl text-center font-extrabold mb-16">
             Our Prices
         </p>
@@ -153,9 +167,7 @@ import HowItWorks from "../components/howItWorks.astro";
             Use3="Advertisements"
         />
 
-         <div class="w-4/12 absolute top-20 -right-16 -z-10 blur-sm -rotate-45">
-			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
-		</div>
+         
 
     </div>
     
@@ -163,7 +175,7 @@ import HowItWorks from "../components/howItWorks.astro";
         How it Works
     </p>
     <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
-        <div class="w-5/12 absolute top-24 -left-1/4 z-0 blur-sm rotate-45">
+        <div class="w-5/12 absolute bottom-24 -left-1/4 z-0 blur-sm rotate-45">
 			<img src="/images/red-planet.png" alt="" class="w-full relative" id="red-planet">
 		</div>
 
@@ -196,7 +208,6 @@ import HowItWorks from "../components/howItWorks.astro";
         </a>
     </div>
 
-
 </Base>
 
 
@@ -215,20 +226,32 @@ import HowItWorks from "../components/howItWorks.astro";
     const bluePlanet = document.getElementById('blue-planet')
     const redPlanet = document.getElementById('red-planet')
     const ast = document.getElementById("ast")
-    const astDiv = document.getElementById("ast-div")
+    // const astDiv = document.getElementById("ast-div")
+
+    const brush = document.getElementById("brush")
+     const brushCont = document.getElementById("brush-cont")
+     const pallete = document.getElementById("pallete")
+     const palleteCont = document.getElementById("pallete-cont")
 
     window.addEventListener("scroll", function(){
 
         let value = window.scrollY;
-        orangePlanet.style.top = value * 0.05 + "px"
-        orangePlanet.style.left = value * 0.05 + "px"
-        bluePlanet.style.top = value * 0.05 + "px"
-        bluePlanet.style.right = value * 0.05 + "px"
-        redPlanet.style.top = value * 0.05 + "px"
-        redPlanet.style.left = value * 0.05 + "px"
+        orangePlanet.style.top = value * 0.15 + "px"
+        orangePlanet.style.left = value * 0.15 + "px"
+        bluePlanet.style.top = value * 0.15 + "px"
+        bluePlanet.style.right = value * 0.15 + "px"
+        redPlanet.style.top = value * 0.15 + "px"
+        redPlanet.style.left = value * 0.15 + "px"
        
-        astDiv.style.transform = `translateX(${value * 0.5}px`
-        ast.style.transform = `rotate(${value * 0.2}deg) `
+        // astDiv.style.transform = `translateX(${value * 0.5}px`
+        ast.style.transform = `rotate(${-value * 0.2}deg) `
+
+        brushCont.style.transform = `translateX(${value * 0.6}px`
+        brush.style.transform = `rotate(${value * 0.5}deg`
+
+        palleteCont.style.transform = `translate(${-value * 0.6}px, ${-value * 0.2}px`
+        pallete.style.transform = `rotate(${-value * 0.2}deg`
+   
        
         
 
