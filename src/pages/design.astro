@@ -7,9 +7,10 @@ import OurWorks2 from "../components/OurWorks2.astro";
 import OfferCard from "../components/offerCard.astro";
 import Prices from "../components/prices.astro";
 import HowItWorks from "../components/howItWorks.astro";
+
 ---
 
-
+Z
 
 <Base title="Graphics Development">
 
@@ -28,6 +29,7 @@ import HowItWorks from "../components/howItWorks.astro";
                 <span class="word">Creations</span>
                 
             </p>
+
 			<div class="flex h-min w-max">
 				<div class="heroBtn">
                     <button class="btn font-semibold tracking-wider burningBtn  mr-5">Pricing</button>
@@ -40,22 +42,30 @@ import HowItWorks from "../components/howItWorks.astro";
 
 
 		</div>
-        <div class="planet w-1/2  relative" id="ast-div">
-            <img class="w-2/3 m-auto  glow3 relative opacity-0" src="/images/astronaut.png" alt="" id="ast">
-        </div>
+        
+        
+        <div class="w-full md:w-1/2 relative">
+            <img class="w-2/3 m-auto relative" src="/images/waving.png" alt="" id='ast'>
+            <div class="absolute top-0 w-28 z-10" id="brush-cont">
+                <img src="/images/brush.png" alt="" class=" relative top-0 " id="brush">
+            </div>
+            <div class="absolute bottom-0 right-0 w-28 z-10" id="pallete-cont">
+                <img src="/images/pallete.png" alt="" class=" relative top-0 " id="pallete">
+            </div>
+	    </div>
+        
+        
+    </div>
 
-		
-	
-	</div>
-
-    <!-- services -->
-    <p class="text-white text-5xl text-center font-extrabold mb-16">
+<!-- services -->
+    <p class="text-white text-5xl text-center font-extrabold mb-16" id="services">
         What We Have to Offer
     </p>
+
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
-        <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm rotate-45">
-			<img loading="lazy" src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
+        <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm">
+			<img src="/images/planet1.png" alt="" class="w-full relative glow1" id="orange-planet">
 		</div>
 		
         <OfferCard
@@ -93,13 +103,12 @@ import HowItWorks from "../components/howItWorks.astro";
             svg="/images/svg/case.svg"
             desc="Experience the speed and responsiveness you've been waiting for! Our websites are optimized for lightning-fast performance, ensuring swift loading times and seamless user interactions for any device"
         />
-
-
-        
     </div>
 
-    <div class="relative mb-32">
-    
+    <div class="relative mb-40">
+        <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm ">
+			<img src="/images/planet2.png" alt="" class="w-full z-0 relative glow2" id="blue-planet">
+		</div>
         <p class="text-white text-5xl text-center font-extrabold mb-16">
             Our Prices
         </p>
@@ -205,10 +214,10 @@ import HowItWorks from "../components/howItWorks.astro";
     <p class="text-white text-5xl text-center font-extrabold mb-16">
         How it Works
     </p>
-    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont">
-        
-        <div class="planet w-4/12 absolute top-0 -left-1/4 z-0 blur-sm rotate-4 ">
-			<img loading="lazy" src="/images/red-planet.png" alt="" class="w-full relative opacity-0" id="red-planet">
+
+    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
+        <div class="w-5/12 absolute bottom-24 -left-1/4 z-0 blur-sm ">
+			<img src="/images/planet3.png" alt="" class="w-full relative glow3" id="red-planet">
 		</div>
 
         <HowItWorks
@@ -226,7 +235,6 @@ import HowItWorks from "../components/howItWorks.astro";
             name="Payment"
             desc="After the design phase, you will provide a the full payment to finalise the transaction. We will then provide you with the design without the watermark"
         />
-       
     </div>
 
     <div class="w-4/5 flex mt-10 mb-20 mx-auto">
@@ -240,8 +248,26 @@ import HowItWorks from "../components/howItWorks.astro";
         </a>
     </div>
 
-
 </Base>
+
+<style>
+
+    .glow1{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(240, 130, 90));
+    }
+
+    .glow2{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(80, 80, 190));
+    }
+
+    .glow3{
+        -webkit-filter: drop-shadow(0px 0px 50px rgb(240, 130, 9));
+        filter: drop-shadow(0px 0px 50px rgb(180, 150, 190));
+    }
+
+</style>
 
 
 <style>
@@ -281,24 +307,29 @@ import HowItWorks from "../components/howItWorks.astro";
     const bluePlanet = document.getElementById('blue-planet')
     const redPlanet = document.getElementById('red-planet')
     const ast = document.getElementById("ast")
-    const astDiv = document.getElementById("ast-div")
+    // const astDiv = document.getElementById("ast-div")
+
+    const brush = document.getElementById("brush")
+     const brushCont = document.getElementById("brush-cont")
+     const pallete = document.getElementById("pallete")
+     const palleteCont = document.getElementById("pallete-cont")
 
     window.addEventListener("scroll", function(){
 
         let value = window.scrollY;
         orangePlanet.style.top = value * 0.15 + "px"
-        orangePlanet.style.left = value * 0.15 + "px"
         bluePlanet.style.top = value * 0.15 + "px"
-        bluePlanet.style.right = value * 0.15 + "px"
-        // redPlanet.style.top = value * 0.15 + "px"
-        // redPlanet.style.left = value * 0.15+ "px"
-       
-        astDiv.style.transform = `translateX(${value * 0.5}px`
-        ast.style.transform = `rotate(${value * 0.2}deg) `
-       
+        redPlanet.style.top = value * 0.15 + "px"
+             
         
+        ast.style.transform = `rotate(${-value * 0.2}deg) `
 
+        brushCont.style.transform = `translateX(${value * 0.6}px`
+        brush.style.transform = `rotate(${value * 0.5}deg`
 
+        palleteCont.style.transform = `translate(${-value * 0.6}px, ${-value * 0.2}px`
+        pallete.style.transform = `rotate(${-value * 0.2}deg`
+   
     })
 </script>
 
