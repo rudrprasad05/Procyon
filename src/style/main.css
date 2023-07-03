@@ -166,6 +166,10 @@ body {
 	animation: float 6s ease-in-out infinite;
   }
 
+  .second {
+    transition-delay: 31.5;
+}
+
   @keyframes float {
 	0% {
 		transform: translatey(0px);

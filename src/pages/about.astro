@@ -7,18 +7,35 @@ import "../style/main.css"
 ---
 
 <Base title='About Us'>
-    <main class="bg-procyon-purple h-100v relative pt-24 text-white">
+    <main class="bg-procyon-purple relative text-white">
+        
 
-    <div class="w-11/12 md:w-3/5 m-auto">
-        <h1 class="h1 text-3xl my-5 w-full text-center">About Us</h1>
-        <p class="mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum recusandae, neque alias ad pariatur corrupti expedita unde rerum ducimus? Ducimus at neque quos ipsa? Excepturi atque fuga maiores maxime aliquid repellendus sint, consequatur voluptatem eligendi aut dolores eaque. Magnam?</p>
-        <h1 class="h1 text-3xl my-5 w-full text-center">Our Team</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class=" m-auto p-0 md:py-14 h-90v justify-between  w-4/5  text-white z-10  opacity-100 flex flex-col md:flex-row items-center relative">
+            <div class="w-full md:w-1/3 -scale-x-100">
+                <img src="/images/astabt1.png" alt="" class="float">
+            </div>            
+            <p class="text-white text-3xl md:text-5xl w-full md:w-1/3 text-center italic font-extrabold mb-10">
+                Two Friends, <br>
+                One Dream.
+            </p>
+            <div class="w-full md:w-1/3">
+                <img src="/images/astabt2.webp" alt="" class="float second">
+            </div>
+            </div>
+        </div>
+        
+    <div class="w-5/6 md:w-3/4 m-auto">
+
+        <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
+			Meet The Dream Team
+		</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
             <Member 
             name="Anav Chand" 
-            image="/images/anav.jpg"
-            role="Designer" 
-            studies="Year 1 BSE" 
+            image="/images/anav.png"
+            role="Fronted Developer" 
+            studies="Year 1 BSE @ USP" 
             website="Portfolio" 
             websiteUrl="https://anav.netlify.app/" 
             githubUrl=""
@@ -28,9 +45,9 @@ import "../style/main.css"
             />
             <Member 
             name="Rudr Prasad" 
-            image="/images/rudr.jpg"
-            role="Developer" 
-            studies="Year 1 BSE" 
+            image="/images/rudr.png"
+            role="Software Engineer" 
+            studies="Year 1 BSE @ USP" 
             website="Portfolio" 
             websiteUrl="https://anav.netlify.app/" 
             githubUrl=""
@@ -39,6 +56,16 @@ import "../style/main.css"
             phoneNumbr=""
             />
         </div>
+
+
+        <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
+			A Little About Procyon
+		</p>
+        
+
+        <p class="mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum recusandae, neque alias ad pariatur corrupti expedita unde rerum ducimus? Ducimus at neque quos ipsa? Excepturi atque fuga maiores maxime aliquid repellendus sint, consequatur voluptatem eligendi aut dolores eaque. Magnam?</p>
+        <p class="mb-10 md:mb-28">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum recusandae, neque alias ad pariatur corrupti expedita unde rerum ducimus? Ducimus at neque quos ipsa? Excepturi atque fuga maiores maxime aliquid repellendus sint, consequatur voluptatem eligendi aut dolores eaque. Magnam?</p>
+
     </div>
 
         
