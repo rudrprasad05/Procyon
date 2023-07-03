@@ -9,17 +9,14 @@ import Prices from "../components/prices.astro";
 import HowItWorks from "../components/howItWorks.astro";
 
 ---
-
-Z
-
 <Base title="Graphics Development">
 
     <!-- landing -->
-    <div class="relative h-90v flex flex-row items-center justify-center m-auto w-4/5 hero">
+    <div class="relative h-90v flex flex-col md:flex-row items-center justify-evenly m-auto w-4/5 hero">
 
       
-		<div class="w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
-			<p class="h-min font-extrabold italic text-6xl pb-5">
+		<div class="w-w-11/12 md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
+			<p class="h-min font-extrabold italic text-3xl md:text-6xl pb-5 text-center md:text-left">
                 <span class="word">Explore</span> 
                 <span class="word">Limitless</span> 
                 <span class="word">Horizons</span> 
@@ -30,13 +27,13 @@ Z
                 
             </p>
 
-			<div class="flex h-min w-max">
-				<div class="heroBtn">
-                    <button class="btn font-semibold tracking-wider burningBtn  mr-5">Pricing</button>
+			<div class="justify-between h-min w-full md:w-min flex">
+				<div class="heroBtn w-1/2 mr-5">
+                    <button class="btn w-full font-semibold tracking-wider burningBtn  ">Pricing</button>
                 </div>
 
-				<div class="heroBtn">
-                    <button class="btn font-semibold tracking-wider border-2 border-amber-600">Features</button>
+				<div class="heroBtn w-1/2">
+                    <button class="btn w-full font-semibold tracking-wider border-2 border-amber-600">Features</button>
                 </div>
 			</div>
 
@@ -45,12 +42,12 @@ Z
         
         
         <div class="w-full md:w-1/2 relative">
-            <img class="w-2/3 m-auto relative" src="/images/waving.png" alt="" id='ast'>
+            <img class="w-2/3 m-auto relative" src="/images/waving.png" alt="paint brush" id='ast'>
             <div class="absolute top-0 w-28 z-10" id="brush-cont">
-                <img src="/images/brush.png" alt="" class=" relative top-0 " id="brush">
+                <img src="/images/brush.png" alt="an astronaut" class=" relative top-0 " id="brush">
             </div>
             <div class="absolute bottom-0 right-0 w-28 z-10" id="pallete-cont">
-                <img src="/images/pallete.png" alt="" class=" relative top-0 " id="pallete">
+                <img src="/images/pallete.png" alt="color palette wood thing" class=" relative top-0 " id="pallete">
             </div>
 	    </div>
         
@@ -65,7 +62,7 @@ Z
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
         <div class="w-6/12 absolute top-2/5 -left-1/3 z-0 blur-sm">
-			<img src="/images/planet1.png" alt="" class="w-full relative glow1" id="orange-planet">
+			<img alt="a planet" src="/images/planet1.png" alt="" class="w-full relative glow1" id="orange-planet">
 		</div>
 		
         <OfferCard
@@ -105,9 +102,9 @@ Z
         />
     </div>
 
-    <div class="relative mb-40">
+    <div class="relative">
         <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm ">
-			<img src="/images/planet2.png" alt="" class="w-full z-0 relative glow2" id="blue-planet">
+			<img alt="a planet" src="/images/planet2.png" alt="" class="w-full z-0 relative glow2" id="blue-planet">
 		</div>
         <p class="text-white text-5xl text-center font-extrabold mb-16">
             Our Prices
@@ -165,9 +162,17 @@ Z
         />
 
          <div class="planet w-4/12 absolute -top-20 -right-16 -z-10 blur-sm -rotate-45">
-			<img loading="lazy" src="/images/blue-planet.png" alt="" class="w-full z-0 relative opacity-0" id="blue-planet">
+			<img alt="a planet" loading="lazy" src="/images/blue-planet.png" alt="" class="w-full z-0 relative opacity-0" id="blue-planet">
 		</div>
 
+    </div>
+
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
+        
+            <p class="italic text-secondary-color  ml-auto">
+                These are base prices and may be subject to change
+            </p>
+            
     </div>
 
     <p id="" class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
@@ -215,9 +220,9 @@ Z
         How it Works
     </p>
 
-    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
+    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont ">
         <div class="w-5/12 absolute bottom-24 -left-1/4 z-0 blur-sm ">
-			<img src="/images/planet3.png" alt="" class="w-full relative glow3" id="red-planet">
+			<img alt="a planet" src="/images/planet3.png" alt="" class="w-full relative glow3" id="red-planet">
 		</div>
 
         <HowItWorks
@@ -237,7 +242,7 @@ Z
         />
     </div>
 
-    <div class="w-4/5 flex mt-10 mb-20 mx-auto">
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
         <a href="" class="flex items-center ml-auto text-white" >
             <p>
                 Learn more

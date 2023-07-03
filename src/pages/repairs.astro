@@ -15,11 +15,11 @@ import OurWorks from "../components/OurWorks.astro";
 
 
     <!-- landing -->
-    <div class="relative h-90v flex flex-col md:flex-row items-center justify-around m-auto w-full md:w-4/5 hero">
+    <div class="relative h-90v flex flex-col md:flex-row items-center justify-evenly m-auto w-full md:w-4/5 hero">
 
         
-		<div class="w-11/12 md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
-			<p class="h-min font-extrabold italic text-6xl pb-5">
+		<div class="w-11/12 md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative ">
+			<p class="h-min font-extrabold italic text-3xl md:text-6xl pb-5 text-center md:text-left">
                 <span class="word">Create</span> 
                 <span class="word">a</span> 
                 <span class="word">Web</span> <br>
@@ -41,8 +41,8 @@ import OurWorks from "../components/OurWorks.astro";
 
 
 		</div>
-        <div class="w-1/2 relative" id="ast-div">
-            <img class="w-2/3 m-auto relative" src="/images/astronaut.png" alt="" id="ast">
+        <div class="w-full md:w-1/2 relative" id="ast-div">
+            <img class="w-2/3 m-auto relative" src="/images/astronaut.png" alt="an astronaut" id="ast">
         </div>
 
 		
@@ -54,10 +54,10 @@ import OurWorks from "../components/OurWorks.astro";
     <p class="text-white text-5xl text-center font-extrabold mb-16" id="services">
         What We Have to Offer
     </p>
-    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont mb-40"> 
+    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
-        <div class="w-6/12 absolute -top-60 -left-1/3 z-0 blur-sm">
-			<img src="/images/planet4.png" alt="" class="w-full relative glow4" id="orange-planet">
+        <div class="planet w-6/12 absolute -top-60 -left-1/3 z-0 blur-sm">
+			<img alt="a planet" src="/images/planet4.png" alt="" class="w-full relative glow4 opacity-0" id="orange-planet">
 		</div>
 		
         <OfferCard
@@ -100,18 +100,18 @@ import OurWorks from "../components/OurWorks.astro";
         
     </div>
 
-    <div class="relative mb-40">
+    <div class="relative">
     
         <p class="text-white text-5xl text-center font-extrabold mb-16">
             Our Prices
         </p>
 
-        <div class="w-4/12 absolute -top-60 -right-16 z-0 blur-sm">
-			<img src="/images/planet5.png" alt="" class="w-full z-0 relative glow5" id="blue-planet">
+        <div class="planet w-4/12 absolute -top-60 -right-16 z-0 blur-sm">
+			<img alt="a planet" src="/images/planet5.png" alt="" class="w-full z-0 relative glow5 opacity-0" id="blue-planet">
 		</div>
 
         <Prices 
-            bundle="Terretrail"
+            bundle="Terrestrial"
             price="$30"
 
             Feature1="Trouble Shooting"
@@ -164,34 +164,42 @@ import OurWorks from "../components/OurWorks.astro";
          
 
     </div>
+
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
+        
+            <p class="italic text-secondary-color  ml-auto">
+                These are base prices and may be subject to change
+            </p>
+            
+    </div>
     
     <p class="text-white text-5xl text-center font-extrabold mb-16">
         How it Works
     </p>
-    <div class="grid h-30vw w-4/5 relative grid-cols-3 mx-auto gap-20 services-cont">
-        <div class="w-5/12 absolute -top-96 -left-1/4 z-0 blur-sm">
-			<img src="/images/planet6.png" alt="" class="w-full relative glow6" id="red-planet">
+    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont ">
+        <div class="planet w-5/12 absolute -top-96 -left-1/4 z-0 blur-sm">
+			<img alt="a planet" src="/images/planet6.png" alt="" class="w-full relative glow6 opacity-0" id="red-planet">
 		</div>
 
         <HowItWorks
             number="01"
-            name="Planning"
-            desc=" During the planning phase, we will understand you goals, requirements, and target audience. This involves conducting research, gathering information, and defining the project scope, objectives, and timelines."
+            name="Trouble Shooting"
+            desc=" During this phase, we will understand you problem and requirements by finding the root of the problem"
         />
         <HowItWorks
             number="02"
-            name="Designing"
-            desc=" In the designing phase, we'll focus on creating the visual and functional aspects. We'll work closely with you to develop a captivating and user-friendly design that aligns with the your brand identity"
+            name="Repairs"
+            desc="In the repair phase we will come up with a solution to your problem and work to implement it"
         />
         <HowItWorks
             number="03"
             name="Payment"
-            desc="After the design phase, you will provide a the full payment to finalise the transaction. We will then provide you with the design without the watermark"
+            desc="You will provide a the full payment to finalise the transaction. Prices displayed are base prices and may be subject to change"
         />
        
     </div>
 
-    <div class="w-4/5 flex mt-10 mb-40 mx-auto">
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
         <a href="/terms" class="flex items-center ml-auto text-white" >
             <p>
                 Learn more

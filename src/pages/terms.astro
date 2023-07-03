@@ -1,5 +1,6 @@
 ---
 import Base from "../layout/base.astro";
+import "../style/main.css"
 import LegalHeros from "../components/legalHeros.astro";
 ---
 
@@ -11,7 +12,7 @@ import LegalHeros from "../components/legalHeros.astro";
         style="filter: drop-shadow(0px 0px 50px rgb(60, 130, 200))"
     />
 
-    <div class="bg-procyon-purple w-4/5 mx-auto">
+    <div class="bg-procyon-purple w-5/6 md:w-4/5 mx-auto">
     
    
 <p>Last updated: July 02, 2023</p>
@@ -104,7 +105,10 @@ You agree that the original English text shall prevail in the case of a dispute.
 <style>
 p, ul{
     color: #C4B5FD;
+}
 
+h1 {
+    font-weight: bolder;
 }
 
 </style>

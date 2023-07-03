@@ -8,18 +8,16 @@ import HowItWorks from "../components/howItWorks.astro";
 import OurWorks from "../components/OurWorks.astro";
 ---
 
-
-
 <Base title="Web Development">
 
 
 
     <!-- landing -->
-    <div class="relative h-90v flex flex-col md:flex-row items-center justify-around m-auto w-full md:w-4/5 hero">
+    <div class="relative h-90v flex flex-col md:flex-row items-center justify-evenly m-auto w-full md:w-4/5 hero">
 
         
 		<div class="w-11/12 md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
-			<p class="h-min font-extrabold italic text-6xl pb-5">
+			<p class="h-min font-extrabold italic text-3xl md:text-6xl pb-5 text-center md:text-left">
                 <span class="word">Create</span> 
                 <span class="word">a</span> 
                 <span class="word">Web</span> <br>
@@ -42,7 +40,7 @@ import OurWorks from "../components/OurWorks.astro";
 
 		</div>
         <div class="w-full md:w-1/2 relative" id="ast-div">
-            <img class="w-2/3 m-auto relative" src="/images/rocket.png" alt="" id="ast">
+            <img alt="a planet" class="w-2/3 m-auto relative" src="/images/rocket.png" alt="an astronaut" id="ast">
         </div>
 
 		
@@ -56,7 +54,7 @@ import OurWorks from "../components/OurWorks.astro";
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
         <div class="planet w-full md:w-1/2 absolute -top-2/5 -left-1/3 z-0 blur-sm rotate-45">
-			<img loading="lazy" src="/images/orange-planet.png" alt="" class="w-full relative opacity-0" id="orange-planet">
+			<img loading="lazy" src="/images/orange-planet.png" alt="a planet" class="w-full relative opacity-0" id="orange-planet">
 		</div>
 		
             
@@ -65,73 +63,43 @@ import OurWorks from "../components/OurWorks.astro";
             svg="/images/svg/write.svg"
             desc="Unleash the power of WordPress for your online presence! Our expert team specializes in crafting stunning, feature-rich WordPress websites"
         />
-        
-        
-
-    
         <OfferCard
             name="User Authentication"
             svg="/images/svg/user.svg"
             desc="Ensure top-notch security with SSL certificates and user authentication on your website with our robust solutions. Safeguard sensitive data and protect user accounts from unauthorized access. "
         />
-    
-        
-        
-    
         <OfferCard
             name="Database & Hosting"
             svg="/images/svg/data.svg"
             desc="Unlock the power of streamlined performance with our cutting-edge database and hosting solutions. Seamlessly store and retrieve data, ensuring lightning-fast access to vital information."
         />
-    
-        
-
-
-    
         <OfferCard
             name="E-Commerce"
             svg="/images/svg/creditCard.svg"
             desc="Step into the world of e-commerce success with our comprehensive solutions. Our expert team will help you build a powerful online store that drives sales and maximizes revenue."
         />
-    
-        
-
-    
         <OfferCard
             name="Custom Solution"
             svg="/images/svg/custom.svg"
             desc="Experience the ultimate in website customization with our bespoke solutions. Our dedicated team will work closely with you to understand your unique requirements and bring your vision to life"
         />
-        
-
-    
-        
-    
-
         <OfferCard
         name="Lighting Fast"
         svg="/images/svg/bolt.svg"
         desc="Experience the speed and responsiveness you've been waiting for! Our websites are optimized for lightning-fast performance, ensuring swift loading times and seamless user interactions for any device"
-        />
-
-
-
-    
-
-
-        
+        /> 
     </div>
 
     <!-- prices -->
 
-    <div class="relative mb-32">
+    <div class="relative">
     
 		<p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
             Our Prices
         </p>
 
         <div class="w-4/12 absolute -top-20 -right-16 z-0 blur-sm ">
-			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative glow-blue" id="blue-planet">
+			<img alt="a planet" src="/images/blue-planet.png" alt="" class="w-full z-0 relative glow-blue" id="blue-planet">
 		</div>
 
         <Prices 
@@ -185,6 +153,14 @@ import OurWorks from "../components/OurWorks.astro";
             Use3="Banking Systems"
         />
 
+    </div>
+
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
+        
+            <p class="italic text-secondary-color  ml-auto">
+                These are base prices and may be subject to change
+            </p>
+            
     </div>
 
     <p id="" class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
@@ -273,10 +249,10 @@ import OurWorks from "../components/OurWorks.astro";
             desc="Upon successful completion of the development and optimization phases, the client is required to make the final payment to the web development firm. This payment confirms the acceptance of the completed work and enables the transfer of ownership"
         />
         <div class="w-2/3 md:w-4/12 absolute -top-full -left-1/4 z-0 blur-sm">
-			<img src="/images/red-planet.png" alt="" class="w-full relative glow-red" id="red-planet">
+			<img alt="a planet" src="/images/red-planet.png" alt="" class="w-full relative glow-red" id="red-planet">
 		</div>
     </div>
-    <div class="w-4/5 flex mt-10 mb-28 mx-auto">
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
         <a href="/terms" class="flex items-center ml-auto text-white" >
             <p>
                 Learn more
@@ -287,6 +263,7 @@ import OurWorks from "../components/OurWorks.astro";
         </a>
     </div>
     
+
 </Base>
 
 <style>
@@ -360,9 +337,6 @@ import OurWorks from "../components/OurWorks.astro";
         astDiv.style.transform = `translateX(${value * 0.5}px`
         ast.style.transform = `translateY(${-value * 0.2}px) `
        
-        
-
-
     })
 </script>
 
