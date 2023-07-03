@@ -1,6 +1,8 @@
 ---
 import Base from "../layout/base.astro";
 import LegalHeros from "../components/legalHeros.astro";
+import "../style/main.css"
+
 ---
 
 <Base title="Privacy Policy">
@@ -11,7 +13,7 @@ import LegalHeros from "../components/legalHeros.astro";
         style="filter: drop-shadow(0px 0px 50px rgb(210, 190, 250))"
     />
 
-<div class="bg-procyon-purple w-4/5 mx-auto">
+<div class="bg-procyon-purple w-5/6 md:w-4/5 mx-auto">
     <p>Last updated: July 02, 2023</p>
 
     <p>This Privacy Policy describes how Procyon ("we," "our," or "us") collects, uses, shares, and protects personal information obtained from users ("you" or "users") of our website, mobile applications, and any other services we provide (collectively, the "Services"). We are committed to protecting your privacy and ensuring the security of your personal information. By accessing or using our Services, you agree to the terms of this Privacy Policy.</p>
@@ -94,5 +96,9 @@ p{
     -webkit-filter: drop-shadow(0px 0px 50px #FF914D);
     filter: drop-shadow(0px 0px 50px #FF914D);
   }
+
+  h1 {
+    font-weight: bolder;
+}
 
 </style>
