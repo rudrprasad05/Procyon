@@ -1,49 +1,20 @@
 ---
-
-import Member from "../components/member.astro";
 import Base from "../layout/base.astro";
 import "../style/main.css"
-
 ---
+<Base title="About Us">
 
-<Base title='About Us'>
-    <main class="bg-procyon-purple h-100v relative pt-24 text-white">
+    <div class="flex w-4/5 mx-auto h-90v">
+        <div class="my-auto">
+            <img src="/images/astronaut.png" alt="">
+        </div>
 
-    <div class="w-11/12 md:w-3/5 m-auto">
-        <h1 class="h1 text-3xl my-5 w-full text-center">About Us</h1>
-        <p class="mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum recusandae, neque alias ad pariatur corrupti expedita unde rerum ducimus? Ducimus at neque quos ipsa? Excepturi atque fuga maiores maxime aliquid repellendus sint, consequatur voluptatem eligendi aut dolores eaque. Magnam?</p>
-        <h1 class="h1 text-3xl my-5 w-full text-center">Our Team</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <Member 
-            name="Anav Chand" 
-            image="/images/anav.jpg"
-            role="Designer" 
-            studies="Year 1 BSE" 
-            website="Portfolio" 
-            websiteUrl="https://anav.netlify.app/" 
-            githubUrl=""
-            igUrl=""
-            gmilUrl=""
-            phoneNumbr=""
-            />
-            <Member 
-            name="Rudr Prasad" 
-            image="/images/rudr.jpg"
-            role="Developer" 
-            studies="Year 1 BSE" 
-            website="Portfolio" 
-            websiteUrl="https://anav.netlify.app/" 
-            githubUrl=""
-            igUrl=""
-            gmilUrl=""
-            phoneNumbr=""
-            />
+        <p class="grow text-6xl text-white h-min w-min m-auto italic font-extrabold">Two Friends <br> One Dream</p>
+
+        <div class="my-auto">
+            <img src="/images/astronaut.png" alt="">
         </div>
     </div>
-
-        
-
-    </main>
 
 </Base>
 
