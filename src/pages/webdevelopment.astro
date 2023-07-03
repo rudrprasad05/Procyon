@@ -92,7 +92,7 @@ import OurWorks from "../components/OurWorks.astro";
 
     <!-- prices -->
 
-    <div class="relative mb-32">
+    <div class="relative">
     
 		<p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
             Our Prices
@@ -155,11 +155,19 @@ import OurWorks from "../components/OurWorks.astro";
 
     </div>
 
+    <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
+        
+            <p class="italic text-secondary-color  ml-auto">
+                These are base prices and may be subject to change
+            </p>
+            
+    </div>
+
     <p id="" class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
         Our Websites
     </p>
 
-    <div class= " w-3/5 mx-auto mb-28">
+    <div class= " w-3/5 mx-auto mb-28 relative">
         <div  role="status" id="daddy" class=" flex daddy relative">
 
         <OurWorks 
@@ -181,13 +189,13 @@ import OurWorks from "../components/OurWorks.astro";
         img="/images/w3.jpg"
         />
         <OurWorks 
-        name="Bismuth Web Dev"
+        name="Computer 1"
         type="Cosmic"
         link=""
         img="/images/w4.jpg"
         />
         <OurWorks 
-        name="Computer 1"
+        name="Bismuth Web Dev"
         type="Galactic"
         link=""
         img="/images/w5.jpg"
@@ -200,16 +208,22 @@ import OurWorks from "../components/OurWorks.astro";
         />
 
         </div>
+
+        
     </div>
 
     <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
         How it Works
+
+       
         
     </p>
 
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-6">
         
-
+         <div class="w-2/3 md:w-4/12 absolute -top-[80rem] -left-1/4 z-0 blur-sm">
+			<img alt="a planet" src="/images/red-planet.png" alt="" class="w-full relative glow-red" id="red-planet">
+		</div>
         <HowItWorks
             number="01"
             name="Planning"
@@ -240,9 +254,7 @@ import OurWorks from "../components/OurWorks.astro";
             name="Final Payment"
             desc="Upon successful completion of the development and optimization phases, the client is required to make the final payment to the web development firm. This payment confirms the acceptance of the completed work and enables the transfer of ownership"
         />
-        <div class="w-2/3 md:w-4/12 absolute -top-full -left-1/4 z-0 blur-sm">
-			<img alt="a planet" src="/images/red-planet.png" alt="" class="w-full relative glow-red" id="red-planet">
-		</div>
+        
     </div>
     <div class="w-4/5 flex mt-10 mb-10 md:mb-28 mx-auto">
         <a href="/terms" class="flex items-center ml-auto text-white" >
@@ -254,6 +266,7 @@ import OurWorks from "../components/OurWorks.astro";
             </span>
         </a>
     </div>
+    
 
 </Base>
 
