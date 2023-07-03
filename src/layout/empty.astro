@@ -1,16 +1,15 @@
 ---
-
-import Footer from "../components/footer.astro";
-import Nav from "../components/nav.astro";
-const { title } = Astro.props
-
+const { title, description, keywords } = Astro.props
 ---
-<html class="overflow-x-clip">
+
+<html lang="en" class="overflow-x-clip">
 
     <head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description}>
+        <meta name="keywords" content={keywords}>
 		<title>{title}</title>
 	</head>
 
