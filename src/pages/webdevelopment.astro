@@ -6,6 +6,7 @@ import OfferCard from "../components/offerCard.astro";
 import Prices from "../components/prices.astro";
 import HowItWorks from "../components/howItWorks.astro";
 import OurWorks from "../components/OurWorks.astro";
+import OurWorksSm from "../components/OurWorksSm.astro";
 ---
 
 <Base title="Web Development">
@@ -167,8 +168,8 @@ import OurWorks from "../components/OurWorks.astro";
         Our Websites
     </p>
 
-    <div class= " w-3/5 mx-auto mb-28 relative">
-        <div  role="status" id="daddy" class=" flex daddy relative">
+    <div class= "hidden md:block w-3/5 mx-auto mb-28 relative">
+        <div  role="status" id="daddy" class=" hidden md:flex daddy relative">
 
         <OurWorks 
         name="Codeology.net"
@@ -206,11 +207,35 @@ import OurWorks from "../components/OurWorks.astro";
         link=""
         img="/images/w6.jpg"
         />
-
-        </div>
-
-        
     </div>
+</div>
+
+<div class="block md:hidden w-5/6 m-auto">
+    <OurWorksSm
+    link=""
+    img="/images/w1.jpg"
+    />
+    <OurWorksSm
+    link=""
+    img="/images/w2.jpg"
+    />
+    <OurWorksSm
+    link=""
+    img="/images/w3.jpg"
+    />
+    <OurWorksSm
+    link=""
+    img="/images/w4.jpg"
+    />
+    <OurWorksSm
+    link=""
+    img="/images/w5.jpg"
+    />
+    <OurWorksSm
+    link=""
+    img="/images/w6.jpg"
+    />
+</div>
 
     <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
         How it Works
