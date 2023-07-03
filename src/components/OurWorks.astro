@@ -1,84 +1,59 @@
-<div id="daddy" class="flex daddy relative">
-    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
-        <div class="absolute top-0 left-0 p-5">
-            <p class="font-extrabold tracking-wider text-3xl italic text-white">Codeology.net</p>
-            <p class="text-secondary-color text-2xl">Galactic Website</p>
-            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
-        </div>
-        <img src="/images/w1.jpg" alt="" class="h-full w-full object-cover">
+---
+const { name, type,img, link } = Astro.props
+---
+
+<div class=" panel rounded-md border border-purple-500 overflow-hidden relative">
+    <div class="absolute top-0 title left-0 p-5 opacity-0">
+        <p class="font-extrabold tracking-wider text-3xl italic text-white">{name}</p>
+        <p class="text-secondary-color text-2xl">{type} Website</p>
+        <a href={link}><button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button></a>
     </div>
-    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
-        <div class="absolute top-0 left-0 p-5">
-            <p class="font-extrabold tracking-wider text-3xl italic text-white">Jai Narayan College</p>
-            <p class="text-secondary-color text-2xl">Cosmic Website</p>
-            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
-        </div>
-        <img src="/images/w2.jpg" alt="" class="h-full w-full object-cover">
-    </div>
-    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
-        <div class="absolute top-0 left-0 p-5">
-            <p class="font-extrabold tracking-wider text-3xl italic text-white">Kants Rentals</p>
-            <p class="text-secondary-color text-2xl">Cosmic Website</p>
-            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
-        </div>
-        <img src="/images/w3.jpg" alt="" class="h-full w-full object-cover">
-    </div>
-    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
-        <div class="absolute top-0 left-0 p-5">
-            <p class="font-extrabold tracking-wider text-3xl italic text-white">Computer 1</p>
-            <p class="text-secondary-color text-2xl">Galactic Website</p>
-            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
-        </div>
-        <img src="/images/w4.jpg" alt="" class="h-full w-full object-cover">
-    </div>
-    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
-        <div class="absolute top-0 left-0 p-5">
-            <p class="font-extrabold tracking-wider text-3xl italic text-white">Bismuth Web Dev</p>
-            <p class="text-secondary-color text-2xl">Cosmic Website</p>
-            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
-        </div>
-        <img src="/images/w5.jpg" alt="" class="h-full w-full object-cover">
-    </div>
-    <div class="panel rounded-xl border border-purple-500 overflow-hidden relative">
-        <div class="absolute top-0 left-0 p-5">
-            <p class="font-extrabold tracking-wider text-3xl italic text-white">Personal Porffolio</p>
-            <p class="text-secondary-color text-2xl">Nebula Website</p>
-            <button class="btn border-2 border-purple-500 mt-2 text-purple-300">Live Preview</button>
-        </div>
-        <img src="/images/w6.jpg" alt="" class="h-full w-full object-cover">
+    <img loading="lazy" src={img} alt="" class="h-full w-full object-cover opacity-0">
+    <div class="animate-pulse loader absolute top-0 left-0  flex items-center justify-center w-full h-full bg-purple-700">
+        <svg class="w-12 h-12 text-gray-200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="white" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
     </div>
 </div>
 
-<style>
-    .daddy {
-        width: calc(600% + 300px);
-        height: 100%;
-    }
 
+<style>
     .panel {
         height: 440px;
         margin-right: 50px;
     }
+
+    .panel.loaded > img{
+        opacity: 1;
+    }
+
+    .panel.loaded > .title{
+        opacity: 1;
+    }
+
+    .panel.loaded > .loader {
+       display: none;
+    }
+
+    .panel .loader, .panel img {
+        width: 60vw;
+    }
+ 
+
 </style>
 
 <script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    gsap.registerPlugin(ScrollTrigger);
-
-    let sections = gsap.utils.toArray(".panel");
-
-    gsap.to(sections, {
-    xPercent: -100 * (sections.length - 0.75),
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".daddy",
-        pin: true,
-        start: "-50px",
-        scrub: 0.5,
-        // snap: 1 / (sections.length - 0.75),
-        end: () => "+=" + document.getElementById("daddy").offsetWidth
+const blurDiv = document.querySelectorAll(".panel")
+blurDiv.forEach(div => {
+const img = div.querySelector("img")
+    function loaded() {
+        div.classList.add("loaded")
     }
-});
 
+    if (img.complete) {
+        loaded();
+    }
+
+    else {
+        img.addEventListener("load" ,loaded)
+    }
+})
 </script>

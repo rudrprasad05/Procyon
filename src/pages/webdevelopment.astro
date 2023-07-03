@@ -55,8 +55,8 @@ import OurWorks from "../components/OurWorks.astro";
     </p>
     <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
 
-        <div class="w-full md:w-1/2 absolute -top-2/5 -left-1/3 z-0 blur-sm rotate-45">
-			<img src="/images/orange-planet.png" alt="" class="w-full relative" id="orange-planet">
+        <div class="planet w-full md:w-1/2 absolute -top-2/5 -left-1/3 z-0 blur-sm rotate-45">
+			<img loading="lazy" src="/images/orange-planet.png" alt="" class="w-full relative opacity-0" id="orange-planet">
 		</div>
 		
         <OfferCard
@@ -101,7 +101,7 @@ import OurWorks from "../components/OurWorks.astro";
 
     <!-- prices -->
 
-    <div class="relative mb-40">
+    <div class="relative mb-32">
     
 		<p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
             Our Prices
@@ -158,26 +158,65 @@ import OurWorks from "../components/OurWorks.astro";
             Use3="Banking Systems"
         />
 
-         <div class="w-full md:w-5/12 absolute -top-40 -right-40 -z-10 blur-sm -rotate-45">
-			<img src="/images/blue-planet.png" alt="" class="w-full z-0 relative " id="blue-planet">
+         <div class="planet w-full md:w-5/12 absolute -top-40 -right-40 -z-10 blur-sm -rotate-45">
+			<img loading="lazy" src="/images/blue-planet.png" alt="" class="w-full z-0 relative opacity-0" id="blue-planet">
 		</div>
 
     </div>
 
     <p id="" class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
-        Our Works
+        Our Websites
     </p>
 
     <div class= " w-3/5 mx-auto mb-28">
-        <OurWorks/>
+        <div  role="status" id="daddy" class=" flex daddy relative">
+
+        <OurWorks 
+        name="Codeology.net"
+        type="Galactic"
+        link=""
+        img="/images/w1.jpg"
+        />
+        <OurWorks 
+        name="Jai Narayan College"
+        type="Cosmic"
+        link=""
+        img="/images/w2.jpg"
+        />
+        <OurWorks 
+        name="Kants Rentals"
+        type="Galactic"
+        link=""
+        img="/images/w3.jpg"
+        />
+        <OurWorks 
+        name="Bismuth Web Dev"
+        type="Cosmic"
+        link=""
+        img="/images/w4.jpg"
+        />
+        <OurWorks 
+        name="Computer 1"
+        type="Galactic"
+        link=""
+        img="/images/w5.jpg"
+        />
+        <OurWorks 
+        name="Personal Portfolio"
+        type="Nebula"
+        link=""
+        img="/images/w6.jpg"
+        />
+
+        </div>
     </div>
 
     <p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10">
         How it Works
     </p>
-    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont mb-28">
-        <div class="w-2/3 md:w-4/12 absolute -top-72 -left-1/4 z-0 blur-sm rotate-45">
-			<img src="/images/red-planet.png" alt="" class="w-full relative" id="red-planet">
+    <div class="grid h-30vw w-5/6 md:w-4/5 relative grid-cols-1 md:grid-cols-3 mx-auto gap-10 services-cont">
+        <div class="planet w-2/3 md:w-4/12 absolute top-1/4 -left-1/4 z-0 blur-sm rotate-45">
+			<img  loading="lazy" src="/images/red-planet.png" alt="" class="w-full relative opacity-0" id="red-planet">
 		</div>
 
         <HowItWorks
@@ -211,9 +250,26 @@ import OurWorks from "../components/OurWorks.astro";
             desc="Upon successful completion of the development and optimization phases, the client is required to make the final payment to the web development firm. This payment confirms the acceptance of the completed work and enables the transfer of ownership"
         />
     </div>
+    <div class="w-4/5 flex mt-10 mb-20 mx-auto">
+        <a href="" class="flex items-center ml-auto text-white" >
+            <p>
+                Learn more
+            </p>
+            <span class="ml-2">
+                <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
+            </span>
+        </a>
+    </div>
 
 </Base>
 
+
+<style>
+     .daddy {
+        width: calc(600% + 300px);
+        height: 100%;
+    }
+</style>
 
 <script>
     import { gsap } from 'gsap';
@@ -225,6 +281,20 @@ import OurWorks from "../components/OurWorks.astro";
     gsap.from(".offer", {scrollTrigger: ".offer", y: 100, opacity:0,  stagger: 0.3 });
     gsap.from(".prices", {scrollTrigger: ".prices", y: 100, opacity:0,  stagger: 0.3 });
     gsap.from(".works", {scrollTrigger: ".works", y: 100, opacity:0,  stagger: 0.3 });
+
+    let sections = gsap.utils.toArray(".panel");
+    gsap.to(sections, {
+    xPercent: -100 * (sections.length - 0.75),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".daddy",
+        pin: true,
+        start: "-50px",
+        scrub: 0.5,
+        // snap: 1 / (sections.length - 0.75),
+        end: () => "+=" + document.getElementById("daddy").offsetWidth
+    }
+});
 
     const orangePlanet = document.getElementById('orange-planet')
     const bluePlanet = document.getElementById('blue-planet')
@@ -239,8 +309,8 @@ import OurWorks from "../components/OurWorks.astro";
         orangePlanet.style.left = value * 0.15 + "px"
         bluePlanet.style.top = value * 0.15 + "px"
         bluePlanet.style.right = value * 0.15 + "px"
-        redPlanet.style.top = value * 0.15 + "px"
-        redPlanet.style.left = value * 0.15 + "px"
+        // redPlanet.style.top = value * 0.15 + "px"
+        // redPlanet.style.left = value * 0.15 + "px"
        
         astDiv.style.transform = `translateX(${value * 0.5}px`
         ast.style.transform = `rotate(${value * 0.2}deg) `

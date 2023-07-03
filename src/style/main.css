@@ -156,4 +156,33 @@ body {
     -webkit-filter: drop-shadow(0px 0px 10px rgb(220, 170, 90));
     filter: drop-shadow(0px 0px 10px rgb(255, 75, 240));
   }
+  .glowufo{
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(162, 0, 255, 0.575));
+    filter: drop-shadow(0px 0px 10px rgba(162, 0, 255, 0.575));
+
+  }
+
+  .float {
+	animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.planet > img {
+    transition: opacity .5s ease;
+}
+
+.loaded.planet > img {
+    opacity: 1 !important;
+}
 
