@@ -5,6 +5,7 @@ import "../style/main.css"
 
 import ServicesCard from "../components/serviceCard.astro";
 import ClientTestimonial from "../components/clientTestimonial.astro";
+import Contact from "../components/contact.astro";
 ---
 
 <style>
@@ -23,19 +24,25 @@ keywords="web development, graphic design, computer repairs, Fiji, website desig
 
 
 	<!-- landing -->
-	<div class="relative h-screen flex flex-col md:flex-row items-center justify-start m-auto w-4/5">
+	<div class="relative h-screen pt-12 flex flex-col md:flex-row items-center justify-start m-auto w-4/5">
 
 		<div class="py-14 md:h-50v  w-full md:w-1/2 text-white z-10 opacity-100 flex flex-col justify-center relative">
 			<p class="h-min font-extrabold italic text-4xl md:text-6xl"><span class="word">Unleash</span> <span class="word">Your</span> <br> <span class="word">Digital</span> <span class="word">Potential</span> </p>
 			<p class="heroDescription h-min text-2xl my-5">Procyon: your destination for expert website development and stellar graphic design solutions.</p>
 			<div class="flex md:flex-row flex-row  h-min w-max">
 				<div class="heroBtn">
-                    <button class="btn font-semibold tracking-wider burningBtn mr-5 md:mb-0 mb-2">Free Consultaion</button>
+					<a href="#contact">
+						<button class="btn font-semibold tracking-wider burningBtn mr-5 md:mb-0 mb-2">Free Consultaion</button>
+                
+					</a>
                 </div>
 
 				<div class="heroBtn">
-                    <button class="btn font-semibold tracking-wider border-2 border-amber-600">Our Works</button>
-                </div>
+					<a href="/webdevelopment#ourwork">
+						<button class="btn font-semibold tracking-wider border-2 border-amber-600">Our Works</button>
+					
+					</a>
+                 </div>
 			</div>
 
 
@@ -71,6 +78,7 @@ keywords="web development, graphic design, computer repairs, Fiji, website desig
 			svg="/images/svg/computer.svg"
 			path="/webdevelopment"
             desc="Transform Your Vision into Reality with Our Cutting-Edge Web Development Services!"
+			learnMore="Our Websites"
 			/>
 			
 			
@@ -80,7 +88,7 @@ keywords="web development, graphic design, computer repairs, Fiji, website desig
 				svg="/images/svg/graphics.svg"
 				path="/design"
                 desc="Unleash Creative Brilliance: Elevate Your Brand with Our Captivating Graphic Design Services!"
-
+				learnMore="Our Designs"
 			/>
 
 			<ServicesCard
@@ -88,7 +96,7 @@ keywords="web development, graphic design, computer repairs, Fiji, website desig
 				svg="/images/svg/gear.svg"
 				path='/repairs'
                 desc="Revive Your Digital Lifeline: Experience Unparalleled Computer Repair Services!"
-
+				learnMore="More on Repairs"
 			/>
 
 		<div class="planet w-4/5 md:w-4/12 absolute -bottom-1/3 -left-1/4 z-0 blur-sm rotate-45" >
@@ -146,6 +154,14 @@ keywords="web development, graphic design, computer repairs, Fiji, website desig
 		</div>
 	</div>
 
+	<p class="text-white text-3xl md:text-5xl text-center font-extrabold mb-10" id="contact">
+			Talk to Us
+		</p>
+	<div class="z-50" class="relative">
+		<Contact/>
+
+	</div>
+
 
 
 
@@ -177,8 +193,6 @@ keywords="web development, graphic design, computer repairs, Fiji, website desig
 	pinkPlanet.style.top = -value * 0.15 + "px"
 	pinkPlanet.style.left = -value * 0.15 + "px"
 
-	star.style.top = (value) * 0.3 + "px"
-	star.style.left = (value) + "px"
 	
 
 

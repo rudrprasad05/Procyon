@@ -1,31 +1,34 @@
 ---
 import CircleDesigns from "./circleDesigns.astro";
-const {name, svg, path, desc} = Astro.props
+const {name, svg, path, desc, learnMore} = Astro.props
 
 ---
-
-
 <div class="services-cards service z-10">
-    <div class="">
-        <img src={svg} alt="" class="service-card-img">
-    </div>
-    <p class="text-white text-2xl font-extrabold h-min ">
-        {name}
-    </p>
-    <p class="grow text-secondary-color mb-10 mt-6">
-        {desc}
-        </p>
-    <div class="h-min  text-secondary-color flex" id="learn_more">
-        <a href={path} class="flex items-center" >
-            <p>
-                Learn more
+    <a href={path} >
+
+        <div >
+            <div class="">
+                <img src={svg} alt="" class="service-card-img">
+            </div>
+            <p class="text-white text-2xl font-extrabold h-min ">
+                {name}
             </p>
-            <span class="ml-2">
-                <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
-            </span>
-        </a>
-    </div>
-    <CircleDesigns></CircleDesigns>
+            <p class="grow text-secondary-color mb-10 mt-6">
+                {desc}
+                </p>
+            <div class="h-min  text-secondary-color flex" id="learn_more">
+                <a href={path} class="flex items-center" >
+                    <p>
+                        {learnMore}
+                    </p>
+                    <span class="ml-2">
+                        <img src="/images/svg/right-arrow.svg" alt="" class="w-6 h-6">
+                    </span>
+                </a>
+            </div>
+            <CircleDesigns></CircleDesigns>
+        </div>
+    </a>
 </div>
 
 
