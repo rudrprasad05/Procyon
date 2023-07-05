@@ -50,7 +50,7 @@
 *{
     font-family: 'Rubik', sans-serif;
     scroll-behavior: smooth;
-    scroll-padding-top: 50px;
+ 
 }
 
 .burningBtn {
@@ -95,9 +95,11 @@
     src: url("/fonts/GrahamPottaFreePersonalUse-MVR1P.otf") format('opentype');
   }
 
+
+
 body {
     background-color: #3b0764;
-    overflow: hidden;
+
 }
 
 
