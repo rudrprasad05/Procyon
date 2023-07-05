@@ -99,7 +99,7 @@
 
 body {
     background-color: #3b0764;
-
+    overflow-x: hidden;
 }
 
 
