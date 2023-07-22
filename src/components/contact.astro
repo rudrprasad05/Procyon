@@ -1,0 +1,111 @@
+<div class="z-50 w-4/5 mx-auto bg-procyon-highlight-purple relative rounded-md border-2 border-purple-500 mb-20">
+
+<form action="https://formsubmit.co/procyon.websites@gmail.com" method="POST" class="flex flex-col mb-8">
+
+    <div class="flex">
+        <input class="text-secondary-color" type="text" id="name" name="name" placeholder="Name">
+        <input class="text-secondary-color" type="text" id="country" name="country" placeholder="Country">
+    </div>
+
+    <div class="flex">
+        <input class="text-secondary-color" type="email" id="phone" name="email" placeholder="Email">
+        <input class="text-secondary-color" type="tel" id="phone" name="phone" placeholder="Phone">
+    </div>
+
+    <div class="pl-20 pr-20">
+    <textarea id="message" cols="30" rows="10" name="message" placeholder="Enter your Message" class="rounded-md"></textarea>
+
+    </div>
+    
+    <div class="heroBtn">
+   
+        <button class="btn font-semibold tracking-wider border-2 border-amber-600 text-secondary-color">Send</button>
+    
+    </div>
+
+    <input type="hidden" name="_next" value="https://procyon.website/success/">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_autoresponse" value="Dear Valued Customer. We have received your email and will be with you shortly. If it is important then feel free to contact us on mobile: (679) 9261-933">
+    
+
+</form>
+    
+
+
+
+</div>
+
+
+    
+<style>
+
+.heroBtn{
+    margin-left: 80px;
+}
+
+div input{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+    flex-grow: 1;
+    z-index: 50;
+    background: transparent;
+    border-bottom: 1px solid #C4B5FD;
+    padding: 15px 0 10px 0;
+    margin: 20px;
+    margin-inline: 80px;
+    
+}
+
+div textarea{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+    flex-grow: 1;
+    z-index: 50;
+    background: transparent;
+    border: 1px solid #C4B5FD;
+    padding: 15px;
+    margin: 20px 0;
+    width: 100%;
+    color: #C4B5FD;
+
+}
+
+div input::placeholder, div textarea::placeholder{
+    color: #C4B5FD;
+    opacity: 1
+}
+
+div input:focus{
+    outline: none;
+    border-bottom: 1px solid #FF914D;
+    
+}
+
+div textarea:focus{
+    outline: none;
+    border: 1px solid #FF914D;
+    
+}
+
+div input:focus::placeholder, textarea:focus::placeholder{
+    color: #FF914D;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  outline: none;
+    border-bottom: 1px solid #FF914D;
+    background: #6B21A8;
+    -webkit-text-fill-color:#C4B5FD;
+    -webkit-box-shadow: 0 0 0px 1000px #6B21A8 inset;
+}
+
+</style>
+

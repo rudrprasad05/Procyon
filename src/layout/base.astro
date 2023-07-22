@@ -4,10 +4,19 @@ import Nav from "../components/nav.astro";
 const { title, description, keywords } = Astro.props
 ---
 
-<html>
+<html lang="en" class="overflow-x-clip">
 
 
     <head>
+        <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-D2QDW8NGK6"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-D2QDW8NGK6');
+            </script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
@@ -15,6 +24,7 @@ const { title, description, keywords } = Astro.props
         <meta name="keywords" content={keywords}>
         <link rel="icon" type="image/png" href="/images/fav.png">		
         <title>{title}</title>
+        
 	</head>
     <Nav />
     
@@ -22,5 +32,6 @@ const { title, description, keywords } = Astro.props
     
     <Footer/>
     <script src="../scripts/load.js"></script>
+    
 
 </html>
